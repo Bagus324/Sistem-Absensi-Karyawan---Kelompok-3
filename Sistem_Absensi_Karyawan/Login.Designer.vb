@@ -38,9 +38,9 @@ Partial Class Login
         Me.LBLNIK.AutoSize = True
         Me.LBLNIK.Location = New System.Drawing.Point(71, 67)
         Me.LBLNIK.Name = "LBLNIK"
-        Me.LBLNIK.Size = New System.Drawing.Size(25, 13)
+        Me.LBLNIK.Size = New System.Drawing.Size(31, 13)
         Me.LBLNIK.TabIndex = 1
-        Me.LBLNIK.Text = "NIK"
+        Me.LBLNIK.Text = "NIK2"
         '
         'Login
         '
