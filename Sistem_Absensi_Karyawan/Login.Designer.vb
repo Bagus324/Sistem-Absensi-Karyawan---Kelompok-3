@@ -40,7 +40,7 @@ Partial Class Login
         Me.LBLNIK.Name = "LBLNIK"
         Me.LBLNIK.Size = New System.Drawing.Size(31, 13)
         Me.LBLNIK.TabIndex = 1
-        Me.LBLNIK.Text = "NIK2"
+        Me.LBLNIK.Text = "NIK1"
         '
         'Login
         '
