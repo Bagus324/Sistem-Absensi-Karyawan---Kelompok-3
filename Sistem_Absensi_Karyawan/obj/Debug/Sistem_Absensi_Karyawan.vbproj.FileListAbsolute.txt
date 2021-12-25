@@ -1,0 +1,12 @@
+C:\Users\bagus\source\repos\Sistem_Absensi_Karyawan\Sistem_Absensi_Karyawan\bin\Debug\Sistem_Absensi_Karyawan.exe.config
+C:\Users\bagus\source\repos\Sistem_Absensi_Karyawan\Sistem_Absensi_Karyawan\bin\Debug\Sistem_Absensi_Karyawan.exe
+C:\Users\bagus\source\repos\Sistem_Absensi_Karyawan\Sistem_Absensi_Karyawan\bin\Debug\Sistem_Absensi_Karyawan.pdb
+C:\Users\bagus\source\repos\Sistem_Absensi_Karyawan\Sistem_Absensi_Karyawan\bin\Debug\Sistem_Absensi_Karyawan.xml
+C:\Users\bagus\source\repos\Sistem_Absensi_Karyawan\Sistem_Absensi_Karyawan\obj\Debug\Sistem_Absensi_Karyawan.vbproj.AssemblyReference.cache
+C:\Users\bagus\source\repos\Sistem_Absensi_Karyawan\Sistem_Absensi_Karyawan\obj\Debug\Sistem_Absensi_Karyawan.Login.resources
+C:\Users\bagus\source\repos\Sistem_Absensi_Karyawan\Sistem_Absensi_Karyawan\obj\Debug\Sistem_Absensi_Karyawan.Resources.resources
+C:\Users\bagus\source\repos\Sistem_Absensi_Karyawan\Sistem_Absensi_Karyawan\obj\Debug\Sistem_Absensi_Karyawan.vbproj.GenerateResource.cache
+C:\Users\bagus\source\repos\Sistem_Absensi_Karyawan\Sistem_Absensi_Karyawan\obj\Debug\Sistem_Absensi_Karyawan.vbproj.CoreCompileInputs.cache
+C:\Users\bagus\source\repos\Sistem_Absensi_Karyawan\Sistem_Absensi_Karyawan\obj\Debug\Sistem_Absensi_Karyawan.exe
+C:\Users\bagus\source\repos\Sistem_Absensi_Karyawan\Sistem_Absensi_Karyawan\obj\Debug\Sistem_Absensi_Karyawan.xml
+C:\Users\bagus\source\repos\Sistem_Absensi_Karyawan\Sistem_Absensi_Karyawan\obj\Debug\Sistem_Absensi_Karyawan.pdb
