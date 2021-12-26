@@ -23,7 +23,7 @@ Partial Class Login
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.TBUname = New System.Windows.Forms.TextBox()
-        Me.LBLNIK = New System.Windows.Forms.Label()
+        Me.LblUsername = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'TBUname
@@ -33,21 +33,21 @@ Partial Class Login
         Me.TBUname.Size = New System.Drawing.Size(150, 20)
         Me.TBUname.TabIndex = 0
         '
-        'LBLNIK
+        'LblUsername
         '
-        Me.LBLNIK.AutoSize = True
-        Me.LBLNIK.Location = New System.Drawing.Point(71, 67)
-        Me.LBLNIK.Name = "LBLNIK"
-        Me.LBLNIK.Size = New System.Drawing.Size(55, 13)
-        Me.LBLNIK.TabIndex = 1
-        Me.LBLNIK.Text = "Username"
+        Me.LblUsername.AutoSize = True
+        Me.LblUsername.Location = New System.Drawing.Point(71, 67)
+        Me.LblUsername.Name = "LblUsername"
+        Me.LblUsername.Size = New System.Drawing.Size(55, 13)
+        Me.LblUsername.TabIndex = 1
+        Me.LblUsername.Text = "Username"
         '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.LBLNIK)
+        Me.Controls.Add(Me.LblUsername)
         Me.Controls.Add(Me.TBUname)
         Me.Name = "Login"
         Me.Text = "Login"
@@ -57,5 +57,5 @@ Partial Class Login
     End Sub
 
     Friend WithEvents TBUname As TextBox
-    Friend WithEvents LBLNIK As Label
+    Friend WithEvents LblUsername As Label
 End Class
