@@ -140,6 +140,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="TambahKaryawan.Designer.vb">
+      <DependentUpon>TambahKaryawan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TambahKaryawan.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Karyawan.resx">
@@ -150,6 +156,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TambahKaryawan.resx">
+      <DependentUpon>TambahKaryawan.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

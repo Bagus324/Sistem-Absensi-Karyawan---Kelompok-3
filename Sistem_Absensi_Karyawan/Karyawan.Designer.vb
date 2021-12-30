@@ -23,11 +23,11 @@ Partial Class Karyawan
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.LblKaryawan = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridKaryawan = New System.Windows.Forms.DataGridView()
         Me.BtnTambah = New System.Windows.Forms.Button()
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.BtnHapus = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridKaryawan, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LblKaryawan
@@ -40,13 +40,13 @@ Partial Class Karyawan
         Me.LblKaryawan.TabIndex = 1
         Me.LblKaryawan.Text = "KARYAWAN"
         '
-        'DataGridView1
+        'DataGridKaryawan
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 67)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(776, 158)
-        Me.DataGridView1.TabIndex = 2
+        Me.DataGridKaryawan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridKaryawan.Location = New System.Drawing.Point(12, 67)
+        Me.DataGridKaryawan.Name = "DataGridKaryawan"
+        Me.DataGridKaryawan.Size = New System.Drawing.Size(776, 158)
+        Me.DataGridKaryawan.TabIndex = 2
         '
         'BtnTambah
         '
@@ -83,17 +83,17 @@ Partial Class Karyawan
         Me.Controls.Add(Me.BtnHapus)
         Me.Controls.Add(Me.BtnEdit)
         Me.Controls.Add(Me.BtnTambah)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.DataGridKaryawan)
         Me.Controls.Add(Me.LblKaryawan)
         Me.Name = "Karyawan"
         Me.Text = "Karyawan"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridKaryawan, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents LblKaryawan As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DataGridKaryawan As DataGridView
     Friend WithEvents BtnTambah As Button
     Friend WithEvents BtnEdit As Button
     Friend WithEvents BtnHapus As Button
