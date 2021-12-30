@@ -75,7 +75,7 @@ Public Class Fungsi
                                   nik, 
                                   nama, 
                                   alamat, 
-                                  id_jabatan, 
+                                  id_jabatan 
                                   WHERE id_karyawan='" & ID & "'"
 
         sqlRead = sqlCommand.ExecuteReader

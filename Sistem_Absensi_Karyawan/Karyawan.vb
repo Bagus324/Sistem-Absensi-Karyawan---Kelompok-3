@@ -21,7 +21,7 @@
         DataGridKaryawan.DataSource = fungsi.GetDataKaryawanDatabase()
     End Sub
 
-    Private Sub DataGridKaryawan_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridKaryawan.CellContentClick
+    Private Sub DataGridKaryawan_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridKaryawan.CellClick
         Dim index As Integer = e.RowIndex
         Dim selectedRow As DataGridViewRow
         selectedRow = DataGridKaryawan.Rows(index)
@@ -30,12 +30,14 @@
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
-        Dim column As List(Of String) = fungsi.GetDataKaryawanByIDDatabase(selectedData)
+        Dim column = fungsi.GetDataKaryawanByIDDatabase(selectedData)
 
-        fungsi.nikKaryawan = column(1)
-        fungsi.namaKaryawan = column(2)
-        fungsi.alamatKaryawan = column(3)
-        fungsi.jabatantoID = column(4)
-
+        'fungsi.nikKaryawan = column(1)
+        'fungsi.namaKaryawan = column(2)
+        ' fungsi.alamatKaryawan = column(3)
+        ' fungsi.jabatantoID = column(4)
+        '
+        '  Nambah.Show()
+        MessageBox.Show(selectedData)
     End Sub
 End Class
