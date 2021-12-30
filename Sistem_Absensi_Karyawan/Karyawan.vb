@@ -1,8 +1,7 @@
 ﻿Public Class Karyawan
     Public Shared Nambah As TambahKaryawan
     Public Shared fungsi As Fungsi
-    Public Shared selectedTabKoleksi
-    Public Shared selectedTabKoleksiNama
+    Public Shared selectedData
 
     Public Sub New()
         Nambah = New TambahKaryawan
@@ -27,7 +26,16 @@
         Dim selectedRow As DataGridViewRow
         selectedRow = DataGridKaryawan.Rows(index)
 
-        selectedTabKoleksi = selectedRow.Cells(0).Value
-        selectedTabKoleksiNama = selectedRow.Cells(1).Value
+        selectedData = selectedRow.Cells(0).Value
+    End Sub
+
+    Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
+        Dim column As List(Of String) = fungsi.GetDataKaryawanByIDDatabase(selectedData)
+
+        fungsi.nikKaryawan = column(1)
+        fungsi.namaKaryawan = column(2)
+        fungsi.alamatKaryawan = column(3)
+        fungsi.jabatantoID = column(4)
+
     End Sub
 End Class
