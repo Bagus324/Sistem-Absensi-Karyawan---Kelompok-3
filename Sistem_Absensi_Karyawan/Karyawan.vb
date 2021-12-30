@@ -4,7 +4,6 @@
     Public Shared selectedData
 
     Public Sub New()
-        Nambah = New TambahKaryawan
         fungsi = New Fungsi
         ' This call is required by the designer.
         InitializeComponent()
@@ -14,7 +13,8 @@
     End Sub
 
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
-        Nambah.show()
+        Nambah = New TambahKaryawan
+        Nambah.Show()
     End Sub
 
     Private Sub ReloadDataTableDatabase()
@@ -30,14 +30,15 @@
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
-        Dim column = fungsi.GetDataKaryawanByIDDatabase(selectedData)
+        Dim column As List(Of String) = fungsi.GetDataKaryawanByIDDatabase(selectedData)
 
-        'fungsi.nikKaryawan = column(1)
-        'fungsi.namaKaryawan = column(2)
-        ' fungsi.alamatKaryawan = column(3)
-        ' fungsi.jabatantoID = column(4)
-        '
-        '  Nambah.Show()
-        MessageBox.Show(selectedData)
+        fungsi.nikKaryawan = column(1)
+        fungsi.namaKaryawan = column(2)
+        fungsi.alamatKaryawan = column(3)
+        fungsi.jabatantoID = column(4)
+
+        Nambah = New TambahKaryawan
+        Nambah.Show()
+
     End Sub
 End Class

@@ -66,30 +66,35 @@ Public Class Fungsi
     End Function
 
     Public Function GetDataKaryawanByIDDatabase(ID As Integer) As List(Of String)
-        Dim result As New List(Of String)
+        Try
+            Dim result As New List(Of String)
 
-        dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" + "password = " + password + ";" + "database = " + database
-        dbConn.Open()
-        sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id_karyawan,
+            dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" + "password = " + password + ";" + "database = " + database
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlCommand.CommandText = "SELECT id_karyawan,
                                   nik, 
                                   nama, 
                                   alamat, 
-                                  id_jabatan 
-                                  WHERE id_karyawan='" & ID & "'"
+                                  id_jabatan
+                                  FROM data_karyawan
+                                  WHERE id_karyawan='" & ID & "';"
 
-        sqlRead = sqlCommand.ExecuteReader
-        While sqlRead.Read
-            result.Add(sqlRead.GetString(0).ToString())
-            result.Add(sqlRead.GetString(1).ToString())
-            result.Add(sqlRead.GetString(2).ToString())
-            result.Add(sqlRead.GetString(3).ToString())
-            result.Add(sqlRead.GetString(4).ToString())
-        End While
+            sqlRead = sqlCommand.ExecuteReader
+            While sqlRead.Read
+                result.Add(sqlRead.GetString(0).ToString())
+                result.Add(sqlRead.GetString(1).ToString())
+                result.Add(sqlRead.GetString(2).ToString())
+                result.Add(sqlRead.GetString(3).ToString())
+                result.Add(sqlRead.GetString(4).ToString())
+            End While
 
-        sqlRead.Close()
-        dbConn.Close()
-        Return result
+            sqlRead.Close()
+            dbConn.Close()
+            Return result
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString)
+        End Try
     End Function
     Public Property namaKaryawan() As String
         Get

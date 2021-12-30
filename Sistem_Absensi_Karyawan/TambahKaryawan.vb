@@ -1,4 +1,12 @@
 ﻿Public Class TambahKaryawan
+    Public Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+        TbNama.Text = Karyawan.fungsi.namaKaryawan
+        ' Add any initialization after the InitializeComponent() call.
+
+    End Sub
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
         Karyawan.fungsi.namaKaryawan = TbNama.Text
         Karyawan.fungsi.nikKaryawan = TbNIK.Text
