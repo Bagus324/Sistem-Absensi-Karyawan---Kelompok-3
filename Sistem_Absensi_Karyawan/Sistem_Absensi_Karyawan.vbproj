@@ -117,6 +117,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Edit.Designer.vb">
+      <DependentUpon>Edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Fungsi.vb" />
     <Compile Include="Karyawan.vb">
       <SubType>Form</SubType>
@@ -148,6 +154,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Edit.resx">
+      <DependentUpon>Edit.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Karyawan.resx">
       <DependentUpon>Karyawan.vb</DependentUpon>
     </EmbeddedResource>

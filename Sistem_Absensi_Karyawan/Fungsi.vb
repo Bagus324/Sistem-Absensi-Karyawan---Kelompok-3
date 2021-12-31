@@ -96,6 +96,28 @@ Public Class Fungsi
             MessageBox.Show(ex.ToString)
         End Try
     End Function
+    Public Function UpdateDataKoleksiByIDDatabase(ID As Integer,
+                                                  nik As String,
+                                                  nama As String,
+                                                  alamat As String,
+                                                  jabatan As String)
+
+        dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" + "password = " + password + ";" + "database = " + database
+
+        dbConn.Open()
+        sqlCommand.Connection = dbConn
+        sqlQuery = "UPDATE data_karyawan SET " &
+                       "nik='" & nik & "', " &
+                       "nama='" & nama & "', " &
+                       "alamat='" & alamat & "', " &
+                       "id_jabatan='" & jabatan & "' " &
+                       "WHERE id_karyawan=" & ID
+
+        sqlCommand = New MySqlCommand(sqlQuery, dbConn)
+        sqlRead = sqlCommand.ExecuteReader
+        dbConn.Close()
+        sqlRead.Close()
+    End Function
     Public Property namaKaryawan() As String
         Get
             Return nama
@@ -145,13 +167,13 @@ Public Class Fungsi
         End Get
         Set(ByVal value As String)
             If value = 1 Then
-                id_jabatan = "OB"
+                jabatan = "OB"
             ElseIf value = 2 Then
-                id_jabatan = "SO"
+                jabatan = "SO"
             ElseIf value = 3 Then
-                id_jabatan = "OM"
+                jabatan = "OM"
             Else
-                id_jabatan = "BM"
+                jabatan = "BM"
             End If
         End Set
     End Property

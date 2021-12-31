@@ -1,5 +1,6 @@
 ﻿Public Class Karyawan
     Public Shared Nambah As TambahKaryawan
+    Public Shared UpdateData As Edit
     Public Shared fungsi As Fungsi
     Public Shared selectedData
 
@@ -35,10 +36,14 @@
         fungsi.nikKaryawan = column(1)
         fungsi.namaKaryawan = column(2)
         fungsi.alamatKaryawan = column(3)
-        fungsi.jabatantoID = column(4)
+        fungsi.IDtojabatan = column(4)
 
-        Nambah = New TambahKaryawan
-        Nambah.Show()
+        UpdateData = New Edit
+        UpdateData.Show()
 
+    End Sub
+
+    Private Sub Karyawan_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        ReloadDataTableDatabase()
     End Sub
 End Class
