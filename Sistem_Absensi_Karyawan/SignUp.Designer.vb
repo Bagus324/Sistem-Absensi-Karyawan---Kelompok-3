@@ -24,22 +24,19 @@ Partial Class SignUp
     Private Sub InitializeComponent()
         Me.BtnSignUp = New System.Windows.Forms.Button()
         Me.BtnBatal = New System.Windows.Forms.Button()
-        Me.BtnFoto = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.BtnPassword = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.BtnUsername = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.LblSignUp = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'BtnSignUp
         '
         Me.BtnSignUp.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnSignUp.Location = New System.Drawing.Point(402, 286)
+        Me.BtnSignUp.Location = New System.Drawing.Point(218, 295)
         Me.BtnSignUp.Name = "BtnSignUp"
         Me.BtnSignUp.Size = New System.Drawing.Size(100, 33)
         Me.BtnSignUp.TabIndex = 21
@@ -49,30 +46,12 @@ Partial Class SignUp
         'BtnBatal
         '
         Me.BtnBatal.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnBatal.Location = New System.Drawing.Point(530, 286)
+        Me.BtnBatal.Location = New System.Drawing.Point(355, 295)
         Me.BtnBatal.Name = "BtnBatal"
         Me.BtnBatal.Size = New System.Drawing.Size(100, 33)
         Me.BtnBatal.TabIndex = 20
         Me.BtnBatal.Text = "Batal"
         Me.BtnBatal.UseVisualStyleBackColor = True
-        '
-        'BtnFoto
-        '
-        Me.BtnFoto.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnFoto.Location = New System.Drawing.Point(521, 213)
-        Me.BtnFoto.Name = "BtnFoto"
-        Me.BtnFoto.Size = New System.Drawing.Size(126, 27)
-        Me.BtnFoto.TabIndex = 18
-        Me.BtnFoto.Text = "Tambah Foto"
-        Me.BtnFoto.UseVisualStyleBackColor = True
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(521, 79)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(119, 118)
-        Me.PictureBox1.TabIndex = 17
-        Me.PictureBox1.TabStop = False
         '
         'Label2
         '
@@ -125,26 +104,24 @@ Partial Class SignUp
         Me.TextBox1.Size = New System.Drawing.Size(248, 20)
         Me.TextBox1.TabIndex = 11
         '
-        'Label1
+        'LblSignUp
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(97, 19)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(207, 33)
-        Me.Label1.TabIndex = 22
-        Me.Label1.Text = "Form Sign Up"
+        Me.LblSignUp.AutoSize = True
+        Me.LblSignUp.Font = New System.Drawing.Font("Stencil", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSignUp.Location = New System.Drawing.Point(98, 21)
+        Me.LblSignUp.Name = "LblSignUp"
+        Me.LblSignUp.Size = New System.Drawing.Size(220, 34)
+        Me.LblSignUp.TabIndex = 24
+        Me.LblSignUp.Text = "Form Sign Up"
         '
         'SignUp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.LblSignUp)
         Me.Controls.Add(Me.BtnSignUp)
         Me.Controls.Add(Me.BtnBatal)
-        Me.Controls.Add(Me.BtnFoto)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.BtnPassword)
         Me.Controls.Add(Me.TextBox3)
@@ -153,7 +130,6 @@ Partial Class SignUp
         Me.Controls.Add(Me.TextBox1)
         Me.Name = "SignUp"
         Me.Text = "SignUp"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -161,13 +137,11 @@ Partial Class SignUp
 
     Friend WithEvents BtnSignUp As Button
     Friend WithEvents BtnBatal As Button
-    Friend WithEvents BtnFoto As Button
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label2 As Label
     Friend WithEvents BtnPassword As Label
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents BtnUsername As Label
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents LblSignUp As Label
 End Class

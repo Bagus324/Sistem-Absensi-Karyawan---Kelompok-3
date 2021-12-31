@@ -39,14 +39,14 @@ Partial Class SignIn
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(188, 66)
+        Me.TextBox1.Location = New System.Drawing.Point(192, 86)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(255, 20)
         Me.TextBox1.TabIndex = 0
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(188, 111)
+        Me.TextBox2.Location = New System.Drawing.Point(192, 131)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(255, 20)
         Me.TextBox2.TabIndex = 1
@@ -55,7 +55,7 @@ Partial Class SignIn
         '
         Me.BtnUsername.AutoSize = True
         Me.BtnUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnUsername.Location = New System.Drawing.Point(81, 66)
+        Me.BtnUsername.Location = New System.Drawing.Point(85, 86)
         Me.BtnUsername.Name = "BtnUsername"
         Me.BtnUsername.Size = New System.Drawing.Size(97, 24)
         Me.BtnUsername.TabIndex = 2
@@ -63,7 +63,7 @@ Partial Class SignIn
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(188, 164)
+        Me.TextBox3.Location = New System.Drawing.Point(192, 184)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(255, 20)
         Me.TextBox3.TabIndex = 3
@@ -72,7 +72,7 @@ Partial Class SignIn
         '
         Me.BtnPassword.AutoSize = True
         Me.BtnPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnPassword.Location = New System.Drawing.Point(81, 114)
+        Me.BtnPassword.Location = New System.Drawing.Point(85, 134)
         Me.BtnPassword.Name = "BtnPassword"
         Me.BtnPassword.Size = New System.Drawing.Size(92, 24)
         Me.BtnPassword.TabIndex = 4
@@ -82,7 +82,7 @@ Partial Class SignIn
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(81, 164)
+        Me.Label2.Location = New System.Drawing.Point(85, 184)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(57, 24)
         Me.Label2.TabIndex = 5
@@ -90,7 +90,7 @@ Partial Class SignIn
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(502, 59)
+        Me.PictureBox1.Location = New System.Drawing.Point(506, 79)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(119, 118)
         Me.PictureBox1.TabIndex = 6
@@ -98,7 +98,7 @@ Partial Class SignIn
         '
         'BtnFoto
         '
-        Me.BtnFoto.Location = New System.Drawing.Point(511, 196)
+        Me.BtnFoto.Location = New System.Drawing.Point(515, 216)
         Me.BtnFoto.Name = "BtnFoto"
         Me.BtnFoto.Size = New System.Drawing.Size(100, 23)
         Me.BtnFoto.TabIndex = 7
@@ -107,7 +107,7 @@ Partial Class SignIn
         '
         'BtnSignIn
         '
-        Me.BtnSignIn.Location = New System.Drawing.Point(384, 266)
+        Me.BtnSignIn.Location = New System.Drawing.Point(388, 286)
         Me.BtnSignIn.Name = "BtnSignIn"
         Me.BtnSignIn.Size = New System.Drawing.Size(100, 23)
         Me.BtnSignIn.TabIndex = 8
@@ -116,7 +116,7 @@ Partial Class SignIn
         '
         'BtnBatal
         '
-        Me.BtnBatal.Location = New System.Drawing.Point(521, 266)
+        Me.BtnBatal.Location = New System.Drawing.Point(525, 286)
         Me.BtnBatal.Name = "BtnBatal"
         Me.BtnBatal.Size = New System.Drawing.Size(100, 23)
         Me.BtnBatal.TabIndex = 9
@@ -125,7 +125,7 @@ Partial Class SignIn
         '
         'BtnSignUp
         '
-        Me.BtnSignUp.Location = New System.Drawing.Point(241, 266)
+        Me.BtnSignUp.Location = New System.Drawing.Point(245, 286)
         Me.BtnSignUp.Name = "BtnSignUp"
         Me.BtnSignUp.Size = New System.Drawing.Size(100, 23)
         Me.BtnSignUp.TabIndex = 10
@@ -135,10 +135,10 @@ Partial Class SignIn
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(78, 9)
+        Me.Label1.Font = New System.Drawing.Font("Stencil", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(83, 28)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(194, 33)
+        Me.Label1.Size = New System.Drawing.Size(212, 34)
         Me.Label1.TabIndex = 23
         Me.Label1.Text = "Form Sign In"
         '
@@ -160,7 +160,7 @@ Partial Class SignIn
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Name = "SignIn"
-        Me.Text = "Batal"
+        Me.Text = "Sign In"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

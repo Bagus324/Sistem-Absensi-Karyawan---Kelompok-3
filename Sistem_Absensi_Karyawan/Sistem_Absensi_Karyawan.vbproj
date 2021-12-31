@@ -117,25 +117,25 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EditKaryawan.Designer.vb">
-      <DependentUpon>EditKaryawan.vb</DependentUpon>
+    <Compile Include="Absensi.vb" />
+    <Compile Include="GantiStatusAbsensi.Designer.vb">
+      <DependentUpon>GantiStatusAbsensi.vb</DependentUpon>
     </Compile>
-    <Compile Include="EditKaryawan.vb">
+    <Compile Include="GantiStatusAbsensi.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormKaryawan.Designer.vb">
-      <DependentUpon>FormKaryawan.vb</DependentUpon>
+    <Compile Include="FormAbsensi.Designer.vb">
+      <DependentUpon>FormAbsensi.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormKaryawan.vb">
+    <Compile Include="FormAbsensi.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HapusKaryawan.Designer.vb">
-      <DependentUpon>HapusKaryawan.vb</DependentUpon>
+    <Compile Include="HapusAbsensi.Designer.vb">
+      <DependentUpon>HapusAbsensi.vb</DependentUpon>
     </Compile>
-    <Compile Include="HapusKaryawan.vb">
+    <Compile Include="HapusAbsensi.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Karyawan.vb" />
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -170,15 +170,24 @@
     <Compile Include="SignUp.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TambahKaryawan.Designer.vb">
-      <DependentUpon>TambahKaryawan.vb</DependentUpon>
+    <Compile Include="FormAbsensiMasuk.Designer.vb">
+      <DependentUpon>FormAbsensiMasuk.vb</DependentUpon>
     </Compile>
-    <Compile Include="TambahKaryawan.vb">
+    <Compile Include="FormAbsensiMasuk.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Users.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GantiStatusAbsensi.resx">
+      <DependentUpon>GantiStatusAbsensi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAbsensi.resx">
+      <DependentUpon>FormAbsensi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HapusAbsensi.resx">
+      <DependentUpon>HapusAbsensi.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +203,9 @@
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAbsensiMasuk.resx">
+      <DependentUpon>FormAbsensiMasuk.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
@@ -207,6 +219,9 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
