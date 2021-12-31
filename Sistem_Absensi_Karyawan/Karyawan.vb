@@ -3,6 +3,7 @@
     Public Shared UpdateData As Edit
     Public Shared fungsi As Fungsi
     Public Shared selectedData
+    Public Shared selectedNamaData
 
     Public Sub New()
         fungsi = New Fungsi
@@ -28,6 +29,7 @@
         selectedRow = DataGridKaryawan.Rows(index)
 
         selectedData = selectedRow.Cells(0).Value
+        selectedNamaData = selectedRow.Cells(2).Value
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
@@ -45,5 +47,10 @@
 
     Private Sub Karyawan_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         ReloadDataTableDatabase()
+    End Sub
+
+    Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles BtnHapus.Click
+        Dim formDelete = New Hapus()
+        formDelete.Show()
     End Sub
 End Class

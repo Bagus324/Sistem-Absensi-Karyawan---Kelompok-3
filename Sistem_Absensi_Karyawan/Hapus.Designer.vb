@@ -22,9 +22,59 @@ Partial Class Hapus
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.LblKoleksiHapus = New System.Windows.Forms.Label()
+        Me.BtnHapus = New System.Windows.Forms.Button()
+        Me.SuspendLayout()
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(255, 137)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(347, 20)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "Anda yakin ingin menghapus data karyawan ini?"
+        '
+        'LblKoleksiHapus
+        '
+        Me.LblKoleksiHapus.AutoSize = True
+        Me.LblKoleksiHapus.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblKoleksiHapus.ForeColor = System.Drawing.Color.Black
+        Me.LblKoleksiHapus.Location = New System.Drawing.Point(277, 196)
+        Me.LblKoleksiHapus.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblKoleksiHapus.Name = "LblKoleksiHapus"
+        Me.LblKoleksiHapus.Size = New System.Drawing.Size(0, 36)
+        Me.LblKoleksiHapus.TabIndex = 4
+        '
+        'BtnHapus
+        '
+        Me.BtnHapus.Location = New System.Drawing.Point(321, 281)
+        Me.BtnHapus.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnHapus.Name = "BtnHapus"
+        Me.BtnHapus.Size = New System.Drawing.Size(123, 33)
+        Me.BtnHapus.TabIndex = 3
+        Me.BtnHapus.Text = "Ya"
+        Me.BtnHapus.UseVisualStyleBackColor = True
+        '
+        'Hapus
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.LblKoleksiHapus)
+        Me.Controls.Add(Me.BtnHapus)
+        Me.Name = "Hapus"
         Me.Text = "Hapus"
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
+
+    Friend WithEvents Label2 As Label
+    Friend WithEvents LblKoleksiHapus As Label
+    Friend WithEvents BtnHapus As Button
 End Class

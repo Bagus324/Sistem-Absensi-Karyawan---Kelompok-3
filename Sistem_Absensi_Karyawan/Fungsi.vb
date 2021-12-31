@@ -118,6 +118,29 @@ Public Class Fungsi
         dbConn.Close()
         sqlRead.Close()
     End Function
+    Public Function DeleteDataByIDDatabase(ID As Integer)
+        dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" + "password = " + password + ";" + "database = " + database
+
+        Try
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlQuery = "DELETE FROM data_karyawan WHERE id_karyawan = '" & ID & "'"
+
+            Debug.WriteLine(sqlQuery)
+
+            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
+            sqlRead = sqlCommand.ExecuteReader
+            dbConn.Close()
+
+            'Perpustakaan.sqlDt.Load(sqlRead)
+            sqlRead.Close()
+            dbConn.Close()
+        Catch ex As Exception
+            Return ex.Message
+        Finally
+            dbConn.Dispose()
+        End Try
+    End Function
     Public Property namaKaryawan() As String
         Get
             Return nama
