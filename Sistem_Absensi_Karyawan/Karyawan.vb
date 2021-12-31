@@ -38,7 +38,7 @@
         fungsi.nikKaryawan = column(1)
         fungsi.namaKaryawan = column(2)
         fungsi.alamatKaryawan = column(3)
-        fungsi.IDtojabatan = column(4)
+        fungsi.namaJabatanGS = column(4)
 
         UpdateData = New Edit
         UpdateData.Show()

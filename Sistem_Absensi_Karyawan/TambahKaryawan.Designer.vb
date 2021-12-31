@@ -80,7 +80,6 @@ Partial Class TambahKaryawan
         'CmBJabatan
         '
         Me.CmBJabatan.FormattingEnabled = True
-        Me.CmBJabatan.Items.AddRange(New Object() {"OB", "SO", "OM", "BM"})
         Me.CmBJabatan.Location = New System.Drawing.Point(160, 291)
         Me.CmBJabatan.Name = "CmBJabatan"
         Me.CmBJabatan.Size = New System.Drawing.Size(139, 21)
