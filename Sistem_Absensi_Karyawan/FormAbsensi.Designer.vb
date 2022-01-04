@@ -25,11 +25,11 @@ Partial Class FormAbsensi
         Me.ToolStripFormAbsensi = New System.Windows.Forms.ToolStrip()
         Me.BtnAbsensi = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.AbsensiMasukToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AbsensiKeluarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.ListBoxAbsensi = New System.Windows.Forms.ListBox()
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.BtnHapusAbsensi = New System.Windows.Forms.Button()
         Me.BtnSelect = New System.Windows.Forms.Button()
@@ -61,6 +61,18 @@ Partial Class FormAbsensi
         Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(13, 22)
         Me.ToolStripDropDownButton1.Text = "ToolStripDropDownButton1"
         '
+        'AbsensiMasukToolStripMenuItem
+        '
+        Me.AbsensiMasukToolStripMenuItem.Name = "AbsensiMasukToolStripMenuItem"
+        Me.AbsensiMasukToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.AbsensiMasukToolStripMenuItem.Text = "Absensi Masuk"
+        '
+        'AbsensiKeluarToolStripMenuItem
+        '
+        Me.AbsensiKeluarToolStripMenuItem.Name = "AbsensiKeluarToolStripMenuItem"
+        Me.AbsensiKeluarToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.AbsensiKeluarToolStripMenuItem.Text = "Absensi Keluar"
+        '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -73,25 +85,13 @@ Partial Class FormAbsensi
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'ListBox1
+        'ListBoxAbsensi
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(12, 46)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(354, 225)
-        Me.ListBox1.TabIndex = 2
-        '
-        'AbsensiMasukToolStripMenuItem
-        '
-        Me.AbsensiMasukToolStripMenuItem.Name = "AbsensiMasukToolStripMenuItem"
-        Me.AbsensiMasukToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.AbsensiMasukToolStripMenuItem.Text = "Absensi Masuk"
-        '
-        'AbsensiKeluarToolStripMenuItem
-        '
-        Me.AbsensiKeluarToolStripMenuItem.Name = "AbsensiKeluarToolStripMenuItem"
-        Me.AbsensiKeluarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.AbsensiKeluarToolStripMenuItem.Text = "Absensi Keluar"
+        Me.ListBoxAbsensi.FormattingEnabled = True
+        Me.ListBoxAbsensi.Location = New System.Drawing.Point(12, 46)
+        Me.ListBoxAbsensi.Name = "ListBoxAbsensi"
+        Me.ListBoxAbsensi.Size = New System.Drawing.Size(354, 225)
+        Me.ListBoxAbsensi.TabIndex = 2
         '
         'BtnEdit
         '
@@ -128,7 +128,7 @@ Partial Class FormAbsensi
         Me.Controls.Add(Me.BtnSelect)
         Me.Controls.Add(Me.BtnHapusAbsensi)
         Me.Controls.Add(Me.BtnEdit)
-        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.ListBoxAbsensi)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.ToolStripFormAbsensi)
         Me.Name = "FormAbsensi"
@@ -146,7 +146,7 @@ Partial Class FormAbsensi
     Friend WithEvents ToolStripDropDownButton1 As ToolStripDropDownButton
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents ListBoxAbsensi As ListBox
     Friend WithEvents AbsensiMasukToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AbsensiKeluarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BtnEdit As Button

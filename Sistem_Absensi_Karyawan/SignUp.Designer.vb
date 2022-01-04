@@ -28,8 +28,8 @@ Partial Class SignUp
         Me.BtnPassword = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.BtnUsername = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBoxPassword = New System.Windows.Forms.TextBox()
+        Me.TextBoxUsername = New System.Windows.Forms.TextBox()
         Me.LblSignUp = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
@@ -90,19 +90,19 @@ Partial Class SignUp
         Me.BtnUsername.TabIndex = 13
         Me.BtnUsername.Text = "Username"
         '
-        'TextBox2
+        'TextBoxPassword
         '
-        Me.TextBox2.Location = New System.Drawing.Point(207, 134)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(248, 20)
-        Me.TextBox2.TabIndex = 12
+        Me.TextBoxPassword.Location = New System.Drawing.Point(207, 134)
+        Me.TextBoxPassword.Name = "TextBoxPassword"
+        Me.TextBoxPassword.Size = New System.Drawing.Size(248, 20)
+        Me.TextBoxPassword.TabIndex = 12
         '
-        'TextBox1
+        'TextBoxUsername
         '
-        Me.TextBox1.Location = New System.Drawing.Point(207, 89)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(248, 20)
-        Me.TextBox1.TabIndex = 11
+        Me.TextBoxUsername.Location = New System.Drawing.Point(207, 89)
+        Me.TextBoxUsername.Name = "TextBoxUsername"
+        Me.TextBoxUsername.Size = New System.Drawing.Size(248, 20)
+        Me.TextBoxUsername.TabIndex = 11
         '
         'LblSignUp
         '
@@ -126,8 +126,8 @@ Partial Class SignUp
         Me.Controls.Add(Me.BtnPassword)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.BtnUsername)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TextBoxPassword)
+        Me.Controls.Add(Me.TextBoxUsername)
         Me.Name = "SignUp"
         Me.Text = "SignUp"
         Me.ResumeLayout(False)
@@ -141,7 +141,7 @@ Partial Class SignUp
     Friend WithEvents BtnPassword As Label
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents BtnUsername As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBoxPassword As TextBox
+    Friend WithEvents TextBoxUsername As TextBox
     Friend WithEvents LblSignUp As Label
 End Class

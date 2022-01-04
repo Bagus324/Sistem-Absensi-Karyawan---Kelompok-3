@@ -32,6 +32,7 @@ Partial Class FormAbsensiMasuk
         Me.DtpAbsenKeluar = New System.Windows.Forms.DateTimePicker()
         Me.LblTanggal = New System.Windows.Forms.Label()
         Me.DtpTanggal = New System.Windows.Forms.DateTimePicker()
+        Me.BtnTambahAbsensi = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Tbxnama
@@ -123,11 +124,22 @@ Partial Class FormAbsensiMasuk
         Me.DtpTanggal.Size = New System.Drawing.Size(225, 20)
         Me.DtpTanggal.TabIndex = 31
         '
+        'BtnTambahAbsensi
+        '
+        Me.BtnTambahAbsensi.Location = New System.Drawing.Point(445, 315)
+        Me.BtnTambahAbsensi.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnTambahAbsensi.Name = "BtnTambahAbsensi"
+        Me.BtnTambahAbsensi.Size = New System.Drawing.Size(107, 23)
+        Me.BtnTambahAbsensi.TabIndex = 32
+        Me.BtnTambahAbsensi.Text = "Tambah Absensi"
+        Me.BtnTambahAbsensi.UseVisualStyleBackColor = True
+        '
         'FormAbsensiMasuk
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.BtnTambahAbsensi)
         Me.Controls.Add(Me.DtpTanggal)
         Me.Controls.Add(Me.LblTanggal)
         Me.Controls.Add(Me.DtpAbsenKeluar)
@@ -154,4 +166,5 @@ Partial Class FormAbsensiMasuk
     Friend WithEvents DtpAbsenKeluar As DateTimePicker
     Friend WithEvents LblTanggal As Label
     Friend WithEvents DtpTanggal As DateTimePicker
+    Friend WithEvents BtnTambahAbsensi As Button
 End Class
