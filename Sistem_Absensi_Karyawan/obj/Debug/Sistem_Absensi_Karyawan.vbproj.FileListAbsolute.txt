@@ -51,3 +51,4 @@ C:\Users\Dwiki\Sistem-Absensi-Karyawan---Kelompok-3\Sistem_Absensi_Karyawan\obj\
 C:\Users\Dwiki\Sistem-Absensi-Karyawan---Kelompok-3\Sistem_Absensi_Karyawan\obj\Debug\Sistem_Absensi_Karyawan.exe
 C:\Users\Dwiki\Sistem-Absensi-Karyawan---Kelompok-3\Sistem_Absensi_Karyawan\obj\Debug\Sistem_Absensi_Karyawan.xml
 C:\Users\Dwiki\Sistem-Absensi-Karyawan---Kelompok-3\Sistem_Absensi_Karyawan\obj\Debug\Sistem_Absensi_Karyawan.pdb
+C:\Users\Dwiki\Sistem-Absensi-Karyawan---Kelompok-3\Sistem_Absensi_Karyawan\obj\Debug\Sistem_Absensi_Karyawan.InfoAbsensi.resources

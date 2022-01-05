@@ -136,6 +136,12 @@
     <Compile Include="HapusAbsensi.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="InfoAbsensi.Designer.vb">
+      <DependentUpon>InfoAbsensi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InfoAbsensi.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HapusAbsensi.resx">
       <DependentUpon>HapusAbsensi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoAbsensi.resx">
+      <DependentUpon>InfoAbsensi.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>

@@ -22,7 +22,7 @@ Partial Class FormAbsensiMasuk
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Tbxnama = New System.Windows.Forms.TextBox()
+        Me.TextBoxNama = New System.Windows.Forms.TextBox()
         Me.LblAbsenMasuk = New System.Windows.Forms.Label()
         Me.LblNama = New System.Windows.Forms.Label()
         Me.lblabsensi = New System.Windows.Forms.Label()
@@ -35,12 +35,12 @@ Partial Class FormAbsensiMasuk
         Me.BtnTambahAbsensi = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Tbxnama
+        'TextBoxNama
         '
-        Me.Tbxnama.Location = New System.Drawing.Point(327, 124)
-        Me.Tbxnama.Name = "Tbxnama"
-        Me.Tbxnama.Size = New System.Drawing.Size(225, 20)
-        Me.Tbxnama.TabIndex = 13
+        Me.TextBoxNama.Location = New System.Drawing.Point(327, 124)
+        Me.TextBoxNama.Name = "TextBoxNama"
+        Me.TextBoxNama.Size = New System.Drawing.Size(225, 20)
+        Me.TextBoxNama.TabIndex = 13
         '
         'LblAbsenMasuk
         '
@@ -83,11 +83,14 @@ Partial Class FormAbsensiMasuk
         '
         'DtpAbsenMasuk
         '
-        Me.DtpAbsenMasuk.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.DtpAbsenMasuk.CustomFormat = "HH:mm"
+        Me.DtpAbsenMasuk.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DtpAbsenMasuk.Location = New System.Drawing.Point(327, 198)
         Me.DtpAbsenMasuk.Name = "DtpAbsenMasuk"
+        Me.DtpAbsenMasuk.ShowUpDown = True
         Me.DtpAbsenMasuk.Size = New System.Drawing.Size(225, 20)
         Me.DtpAbsenMasuk.TabIndex = 27
+        Me.DtpAbsenMasuk.Value = New Date(2022, 1, 5, 11, 13, 41, 0)
         '
         'LblAbsenKeluar
         '
@@ -101,9 +104,11 @@ Partial Class FormAbsensiMasuk
         '
         'DtpAbsenKeluar
         '
-        Me.DtpAbsenKeluar.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.DtpAbsenKeluar.CustomFormat = "HH:mm"
+        Me.DtpAbsenKeluar.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DtpAbsenKeluar.Location = New System.Drawing.Point(327, 238)
         Me.DtpAbsenKeluar.Name = "DtpAbsenKeluar"
+        Me.DtpAbsenKeluar.ShowUpDown = True
         Me.DtpAbsenKeluar.Size = New System.Drawing.Size(225, 20)
         Me.DtpAbsenKeluar.TabIndex = 29
         '
@@ -126,7 +131,7 @@ Partial Class FormAbsensiMasuk
         '
         'BtnTambahAbsensi
         '
-        Me.BtnTambahAbsensi.Location = New System.Drawing.Point(445, 315)
+        Me.BtnTambahAbsensi.Location = New System.Drawing.Point(445, 325)
         Me.BtnTambahAbsensi.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnTambahAbsensi.Name = "BtnTambahAbsensi"
         Me.BtnTambahAbsensi.Size = New System.Drawing.Size(107, 23)
@@ -147,7 +152,7 @@ Partial Class FormAbsensiMasuk
         Me.Controls.Add(Me.DtpAbsenMasuk)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblabsensi)
-        Me.Controls.Add(Me.Tbxnama)
+        Me.Controls.Add(Me.TextBoxNama)
         Me.Controls.Add(Me.LblAbsenMasuk)
         Me.Controls.Add(Me.LblNama)
         Me.Name = "FormAbsensiMasuk"
@@ -156,7 +161,7 @@ Partial Class FormAbsensiMasuk
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Tbxnama As TextBox
+    Friend WithEvents TextBoxNama As TextBox
     Friend WithEvents LblAbsenMasuk As Label
     Friend WithEvents LblNama As Label
     Friend WithEvents lblabsensi As Label

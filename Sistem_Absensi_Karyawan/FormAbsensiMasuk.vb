@@ -10,29 +10,30 @@
         DtpAbsenMasuk.Format = DateTimePickerFormat.Custom
         DtpAbsenKeluar.Format = DateTimePickerFormat.Custom
 
-        DtpAbsenMasuk.CustomFormat = "yyyy/MM/dd"
-        DtpAbsenKeluar.CustomFormat = "yyyy/MM/dd"
+
+
 
 
     End Sub
-    Public Shared absensi As Absensi
 
+    Public Shared absensi As Absensi
     Private Sub BtnTambahAbsensi_Click(sender As Object, e As EventArgs) Handles BtnTambahAbsensi.Click
-        FormAbsensi.absensi.namaProperty = Tbxnama.Text.ToString()
+        FormAbsensi.absensi.namaProperty = TextBoxNama.Text.ToString()
         FormAbsensi.absensi.TanggalProperty = DtpTanggal.Value.ToShortDateString()
         FormAbsensi.absensi.TanggalProperty = DtpAbsenMasuk.Value.ToShortTimeString()
         FormAbsensi.absensi.TanggalProperty = DtpAbsenKeluar.Value.ToShortTimeString()
 
-        'Dim convertedAbsensi = FormAbsensi.absensi.ConvertAbsensiToString(FormAbsensi.absensi.getKategoriItem)
-        'FormAbsensi.absensi.AddDataAbsensiDatabase(FormAbsensi.absensi.namaProperty,
-        '                                         FormAbsensi.absensi.TanggalProperty,
-        '                                         FormAbsensi.absensi.AbsenMasukProperty,
-        'FormAbsensi.absensi.AbsenKeluarProperty,
-        'convertedAbsensi)
+        Dim convertedAbsensi = FormAbsensi.absensi.ConvertAbsensiToString(FormAbsensi.absensi.getAbsensiItem)
 
-        'Dim infotambah = New Info()
+        FormAbsensi.absensi.AddDataAbsensiDatabase(FormAbsensi.absensi.namaProperty,
+                                                FormAbsensi.absensi.TanggalProperty,
+                                                FormAbsensi.absensi.AbsenMasukProperty,
+                                                FormAbsensi.absensi.AbsenKeluarProperty,
+                                                convertedAbsensi)
 
-        'infotambah.Show()
+        Dim infotambahabsensi = New InfoAbsensi()
+
+        infotambahabsensi.Show()
         Me.Close()
 
     End Sub

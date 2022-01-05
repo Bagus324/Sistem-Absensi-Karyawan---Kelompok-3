@@ -10,7 +10,7 @@ Public Class Absensi
     Private tanggal As String
     Private absen_masuk As String
     Private absen_keluar As String
-    Private kategori As New List(Of String)
+    Private absensi_item As New List(Of String)
 
 
     'Private absensi As New ArrayList()
@@ -22,14 +22,14 @@ Public Class Absensi
     Public Shared sqlRead As MySqlDataReader
     Private sqlQuery As String
 
-    Private server As String = "127.0.0.1"
+    Private server As String = "localhost"
     Private username As String = "root"
     Private password As String = ""
-    Private database As String = "sistemabsensi"
+    Private database As String = "sistem absensi karyawan"
 
-    Public ReadOnly Property getKategoriItem() As List(Of String)
+    Public ReadOnly Property getAbsensiItem() As List(Of String)
         Get
-            Return kategori
+            Return absensi_item
         End Get
     End Property
 
@@ -117,7 +117,8 @@ Public Class Absensi
         dbConn.Close()
         Return result
     End Function
-    Public Function AddDataAbsensiDatabase(nama_karyawan As String,
+    Public Function AddDataAbsensiDatabase(absensi_item As String,
+                                          nama_karyawan As String,
                                           tanggal_absensi As String,
                                           waktu_absen_masuk As String,
                                           waktu_absen_keluar As String)
@@ -132,6 +133,7 @@ Public Class Absensi
             sqlCommand.Connection = dbConn
             sqlQuery = "INSERT INTO ABSENSI(nama_karyawan, tanggal_absensi
                            waktu_absen_masuk, waktu_absen_keluar) VALUE('" _
+                 & absensi_item & "', '" _
                 & nama_karyawan & "', '" _
                  & tanggal_absensi & "', '" _
                   & waktu_absen_masuk & "', '" _

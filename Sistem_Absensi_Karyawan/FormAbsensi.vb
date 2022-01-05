@@ -7,6 +7,7 @@
 
         ' This call is required by the designer.
         InitializeComponent()
+        ReloadDataTableDatabase()
 
         ' Add any initialization after the InitializeComponent() call.
 
@@ -16,8 +17,13 @@
 
     Private Sub FormAbsensi_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         ListBoxAbsensi.Items.Clear()
+        ReloadDataTableDatabase()
     End Sub
 
+
+    Private Sub ReloadDataTableDatabase()
+        DataGridView1.DataSource = absensi.GetDataAbsensiDatabase
+    End Sub
     Private Sub AbsensiMasukToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AbsensiMasukToolStripMenuItem.Click
         Dim formabsensimasuk = New FormAbsensiMasuk()
         formabsensimasuk.Show()
