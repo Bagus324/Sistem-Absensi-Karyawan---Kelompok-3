@@ -7,8 +7,8 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        DtpAbsenMasuk.Format = DateTimePickerFormat.Custom
-        DtpAbsenKeluar.Format = DateTimePickerFormat.Custom
+        'DtpAbsenMasuk.Format = DateTimePickerFormat.Custom
+        'DtpAbsenKeluar.Format = DateTimePickerFormat.Custom
 
 
 
@@ -18,7 +18,7 @@
 
     Public Shared absensi As Absensi
     Private Sub BtnTambahAbsensi_Click(sender As Object, e As EventArgs) Handles BtnTambahAbsensi.Click
-        FormAbsensi.absensi.namaProperty = TextBoxNama.Text.ToString()
+        FormAbsensi.absensi.namaProperty = TextBoxNama.Text
         FormAbsensi.absensi.TanggalProperty = DtpTanggal.Value.ToShortDateString()
         FormAbsensi.absensi.TanggalProperty = DtpAbsenMasuk.Value.ToShortTimeString()
         FormAbsensi.absensi.TanggalProperty = DtpAbsenKeluar.Value.ToShortTimeString()
@@ -31,7 +31,7 @@
                                                 FormAbsensi.absensi.AbsenKeluarProperty,
                                                 convertedAbsensi)
 
-        Dim infotambahabsensi = New InfoAbsensi()
+        Dim infotambahabsensi = New InfoAbsensi
 
         infotambahabsensi.Show()
         Me.Close()

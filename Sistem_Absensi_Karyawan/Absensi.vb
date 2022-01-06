@@ -25,7 +25,7 @@ Public Class Absensi
     Private server As String = "localhost"
     Private username As String = "root"
     Private password As String = ""
-    Private database As String = "sistem absensi karyawan"
+    Private database As String = "sistemabsensikaryawan"
 
     Public ReadOnly Property getAbsensiItem() As List(Of String)
         Get
@@ -99,8 +99,7 @@ Public Class Absensi
     Public Function GetDataAbsensiDatabase() As DataTable
         Dim result As New DataTable
 
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
-            + "password=" + password + ";" + "database =" + database
+        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" + "password=" + password + ";" + "database =" + database
         dbConn.Open()
         sqlCommand.Connection = dbConn
         sqlCommand.CommandText = "SELECT id_absensi AS 'ID',
@@ -117,43 +116,42 @@ Public Class Absensi
         dbConn.Close()
         Return result
     End Function
-    Public Function AddDataAbsensiDatabase(absensi_item As String,
-                                          nama_karyawan As String,
+    Public Function AddDataAbsensiDatabase(nama_karyawan As String,
                                           tanggal_absensi As String,
                                           waktu_absen_masuk As String,
-                                          waktu_absen_keluar As String)
+                                          waktu_absen_keluar As String,
+                                           absensi_item As String)
 
 
 
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
-            + "password=" + password + ";" + "database =" + database
-
-        Try
-            dbConn.Open()
-            sqlCommand.Connection = dbConn
-            sqlQuery = "INSERT INTO ABSENSI(nama_karyawan, tanggal_absensi
-                           waktu_absen_masuk, waktu_absen_keluar) VALUE('" _
-                 & absensi_item & "', '" _
-                & nama_karyawan & "', '" _
-                 & tanggal_absensi & "', '" _
-                  & waktu_absen_masuk & "', '" _
-                   & waktu_absen_keluar & "')"
+        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" + "password=" + password + ";" + "database =" + database
 
 
+        dbConn.Open()
+        sqlCommand.Connection = dbConn
+        sqlQuery = "INSERT INTO absensi (nama_karyawan, tanggal_absensi,
+                           waktu_absen_masuk, waktu_absen_keluar, absensi_item) VALUE(
 
-            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
-            sqlRead = sqlCommand.ExecuteReader
-            dbConn.Close()
+               
+                '" & nama_karyawan & "', 
+                '" & tanggal_absensi & "', 
+                '" & waktu_absen_masuk & "', 
+                '" & waktu_absen_keluar & "',
+                '" & absensi_item & "')"
 
-            sqlRead.Close()
-            dbConn.Close()
+        sqlCommand = New MySqlCommand(sqlQuery, dbConn)
+        sqlRead = sqlCommand.ExecuteReader
+        dbConn.Close()
 
-        Catch ex As Exception
-            Return ex.Message
-        Finally
-            dbConn.Dispose()
+        sqlRead.Close()
+        dbConn.Close()
 
-        End Try
+        'ex As Exception
+        '    Return ex.Message
+        'Finally
+        '    dbConn.Dispose()
+
+        'End Try
 
     End Function
 

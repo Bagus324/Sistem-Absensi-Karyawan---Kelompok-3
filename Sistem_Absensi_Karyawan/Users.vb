@@ -17,7 +17,7 @@ Public Class Users
     Private server As String = "127.0.0.1"
     Private username_db As String = "root"
     Private password_db As String = ""
-    Private database As String = "sistemabsensi"
+    Private database As String = "sistem absensi karyawan"
 
     Public Property UsernameProperty() As String
         Get

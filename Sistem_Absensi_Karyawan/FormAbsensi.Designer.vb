@@ -27,14 +27,14 @@ Partial Class FormAbsensi
         Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
         Me.AbsensiMasukToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AbsensiKeluarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewAbsensi = New System.Windows.Forms.DataGridView()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.ListBoxAbsensi = New System.Windows.Forms.ListBox()
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.BtnHapusAbsensi = New System.Windows.Forms.Button()
         Me.BtnSelect = New System.Windows.Forms.Button()
         Me.ToolStripFormAbsensi.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridViewAbsensi, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ToolStripFormAbsensi
@@ -64,22 +64,22 @@ Partial Class FormAbsensi
         'AbsensiMasukToolStripMenuItem
         '
         Me.AbsensiMasukToolStripMenuItem.Name = "AbsensiMasukToolStripMenuItem"
-        Me.AbsensiMasukToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.AbsensiMasukToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AbsensiMasukToolStripMenuItem.Text = "Absensi Masuk"
         '
         'AbsensiKeluarToolStripMenuItem
         '
         Me.AbsensiKeluarToolStripMenuItem.Name = "AbsensiKeluarToolStripMenuItem"
-        Me.AbsensiKeluarToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.AbsensiKeluarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AbsensiKeluarToolStripMenuItem.Text = "Absensi Keluar"
         '
-        'DataGridView1
+        'DataGridViewAbsensi
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(395, 46)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(323, 123)
-        Me.DataGridView1.TabIndex = 1
+        Me.DataGridViewAbsensi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewAbsensi.Location = New System.Drawing.Point(395, 46)
+        Me.DataGridViewAbsensi.Name = "DataGridViewAbsensi"
+        Me.DataGridViewAbsensi.Size = New System.Drawing.Size(323, 123)
+        Me.DataGridViewAbsensi.TabIndex = 1
         '
         'OpenFileDialog1
         '
@@ -129,13 +129,13 @@ Partial Class FormAbsensi
         Me.Controls.Add(Me.BtnHapusAbsensi)
         Me.Controls.Add(Me.BtnEdit)
         Me.Controls.Add(Me.ListBoxAbsensi)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.DataGridViewAbsensi)
         Me.Controls.Add(Me.ToolStripFormAbsensi)
         Me.Name = "FormAbsensi"
         Me.Text = "Form Absensi"
         Me.ToolStripFormAbsensi.ResumeLayout(False)
         Me.ToolStripFormAbsensi.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridViewAbsensi, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -144,7 +144,7 @@ Partial Class FormAbsensi
     Friend WithEvents ToolStripFormAbsensi As ToolStrip
     Friend WithEvents BtnAbsensi As ToolStripLabel
     Friend WithEvents ToolStripDropDownButton1 As ToolStripDropDownButton
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DataGridViewAbsensi As DataGridView
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents ListBoxAbsensi As ListBox
     Friend WithEvents AbsensiMasukToolStripMenuItem As ToolStripMenuItem
