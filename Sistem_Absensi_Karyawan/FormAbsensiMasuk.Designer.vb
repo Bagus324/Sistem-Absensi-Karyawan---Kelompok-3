@@ -78,7 +78,7 @@ Partial Class FormAbsensiMasuk
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 26
-        Me.Button1.Text = "Button1"
+        Me.Button1.Text = "batal"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'DtpAbsenMasuk

@@ -34,6 +34,7 @@ Partial Class SignIn
         Me.BtnBatal = New System.Windows.Forms.Button()
         Me.BtnSignUp = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -142,6 +143,10 @@ Partial Class SignIn
         Me.Label1.TabIndex = 23
         Me.Label1.Text = "Form Sign In"
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
         'SignIn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -179,4 +184,5 @@ Partial Class SignIn
     Friend WithEvents BtnBatal As Button
     Friend WithEvents BtnSignUp As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class

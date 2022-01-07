@@ -5,6 +5,7 @@ Public Class Users
     Private username As String
     Private password As String
     Private email As String
+    Private foto As String
     Private users As New ArrayList()
 
     Private TripleDes As New TripleDESCryptoServiceProvider
@@ -14,10 +15,10 @@ Public Class Users
     Public Shared sqlRead As MySqlDataReader
     Private sqlQuery As String
 
-    Private server As String = "127.0.0.1"
+    Private server As String = "localhost"
     Private username_db As String = "root"
     Private password_db As String = ""
-    Private database As String = "sistem absensi karyawan"
+    Private database As String = "sistemabsensikaryawan"
 
     Public Property UsernameProperty() As String
         Get
@@ -44,6 +45,15 @@ Public Class Users
         End Get
         Set(value As ArrayList)
             users = value
+        End Set
+    End Property
+
+    Public Property fotoProperty() As String
+        Get
+            Return foto
+        End Get
+        Set(ByVal value As String)
+            foto = value
         End Set
     End Property
 
@@ -79,13 +89,12 @@ Public Class Users
         Try
             Dim result As New List(Of String)
 
-            dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
-           + "password=" + password_db + ";" + "database =" + database
+            dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" + "password=" + password_db + ";" + "database =" + database
 
             dbConn.Open()
             sqlCommand.Connection = dbConn
 
-            Dim queryAuth = "SELECT id_user, username FROM user
+            Dim queryAuth = "SELECT id_users, username FROM users
                             WHERE username='" & username_login & "' AND password='" & EncryptMD5(password_login) & "'"
             sqlCommand.CommandText = queryAuth
             Debug.WriteLine(queryAuth)
@@ -94,6 +103,7 @@ Public Class Users
             If sqlRead.HasRows Then
                 While sqlRead.Read
                     result.Add(sqlRead.GetString(0).ToString())
+                    result.Add(sqlRead.GetString(1).ToString())
                     result.Add(sqlRead.GetString(1).ToString())
 
                 End While
@@ -120,7 +130,7 @@ Public Class Users
             dbConn.Open()
 
             sqlCommand.Connection = dbConn
-            sqlQuery = "INSERT INTO USER(username, password, email, registered_at) VALUE('" _
+            sqlQuery = "INSERT INTO users(username, password, registered_at) VALUE('" _
                         & username_regist & "', '" _
                         & EncryptMD5(password_regist) & "', '" _
                         & today.ToString("yyyy/MM/dd") & "')"
@@ -141,9 +151,9 @@ Public Class Users
         End Try
   
     End Function
-      
-    Public Function register(plainUsername As String, ByVal plainPassword As String) As String
-        
+
+    Public Function signup(plainUsername As String, ByVal plainPassword As String) As String
+
         Dim realPassword As String = EncryptData("")
         Dim realUsername As String = " "
         Dim realEmail As String = " "

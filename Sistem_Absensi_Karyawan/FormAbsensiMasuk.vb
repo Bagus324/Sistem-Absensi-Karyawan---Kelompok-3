@@ -19,17 +19,16 @@
     Public Shared absensi As Absensi
     Private Sub BtnTambahAbsensi_Click(sender As Object, e As EventArgs) Handles BtnTambahAbsensi.Click
         FormAbsensi.absensi.namaProperty = TextBoxNama.Text
-        FormAbsensi.absensi.TanggalProperty = DtpTanggal.Value.ToShortDateString()
-        FormAbsensi.absensi.TanggalProperty = DtpAbsenMasuk.Value.ToShortTimeString()
-        FormAbsensi.absensi.TanggalProperty = DtpAbsenKeluar.Value.ToShortTimeString()
+        FormAbsensi.absensi.TanggalProperty = DtpTanggal.Value.ToString("yyyy/MM/dd")
+        FormAbsensi.absensi.AbsenMasukProperty = DtpAbsenMasuk.Value.ToString("HH:mm:ss")
+        FormAbsensi.absensi.AbsenKeluarProperty = DtpAbsenKeluar.Value.ToString("HH:mm:ss")
 
-        Dim convertedAbsensi = FormAbsensi.absensi.ConvertAbsensiToString(FormAbsensi.absensi.getAbsensiItem)
+        'Dim convertedAbsensi = FormAbsensi.absensi.ConvertAbsensiToString(FormAbsensi.absensi.getAbsensiItem)
 
         FormAbsensi.absensi.AddDataAbsensiDatabase(FormAbsensi.absensi.namaProperty,
                                                 FormAbsensi.absensi.TanggalProperty,
                                                 FormAbsensi.absensi.AbsenMasukProperty,
-                                                FormAbsensi.absensi.AbsenKeluarProperty,
-                                                convertedAbsensi)
+                                                FormAbsensi.absensi.AbsenKeluarProperty)
 
         Dim infotambahabsensi = New InfoAbsensi
 

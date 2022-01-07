@@ -119,8 +119,8 @@ Public Class Absensi
     Public Function AddDataAbsensiDatabase(nama_karyawan As String,
                                           tanggal_absensi As String,
                                           waktu_absen_masuk As String,
-                                          waktu_absen_keluar As String,
-                                           absensi_item As String)
+                                          waktu_absen_keluar As String)
+
 
 
 
@@ -130,14 +130,14 @@ Public Class Absensi
         dbConn.Open()
         sqlCommand.Connection = dbConn
         sqlQuery = "INSERT INTO absensi (nama_karyawan, tanggal_absensi,
-                           waktu_absen_masuk, waktu_absen_keluar, absensi_item) VALUE(
+                           waktu_absen_masuk, waktu_absen_keluar) VALUE(
 
                
                 '" & nama_karyawan & "', 
                 '" & tanggal_absensi & "', 
                 '" & waktu_absen_masuk & "', 
-                '" & waktu_absen_keluar & "',
-                '" & absensi_item & "')"
+                '" & waktu_absen_keluar & "')"
+
 
         sqlCommand = New MySqlCommand(sqlQuery, dbConn)
         sqlRead = sqlCommand.ExecuteReader
@@ -158,8 +158,7 @@ Public Class Absensi
     Public Function getDataAbsensiByIDDatabase(ID As Integer) As List(Of String)
         Dim result As New List(Of String)
 
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
-            + "password=" + password + ";" + "database =" + database
+        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" + "password=" + password + ";" + "database =" + database
         dbConn.Open()
         sqlCommand.Connection = dbConn
         sqlCommand.CommandText = "SELECT id_absensi,
@@ -184,5 +183,7 @@ Public Class Absensi
         dbConn.Close()
         Return result
     End Function
+
+
 
 End Class
