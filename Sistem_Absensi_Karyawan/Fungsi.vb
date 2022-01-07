@@ -9,7 +9,7 @@ Public Class Fungsi
     Private server As String = "127.0.0.1"
     Private username As String = "root"
     Private password As String = ""
-    Private database As String = "karyawan"
+    Private database As String = "sistemabsensikaryawan"
     'sampe sini
     '======================================================
     'GS
@@ -30,7 +30,7 @@ Public Class Fungsi
         Try
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            sqlQuery = "INSERT INTO data_karyawan (nik, nama, alamat, id_jabatan) VALUE ('" & nik & "', '" & nama & "', '" & alamat &
+            sqlQuery = "INSERT INTO karyawan (nik, nama_karyawan, alamat, id_jabatan) VALUE ('" & nik & "', '" & nama & "', '" & alamat &
             "', (SELECT id_jabatan FROM jabatan WHERE nama_jabatan='" & jabatan & "'));"
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
@@ -56,10 +56,10 @@ Public Class Fungsi
         sqlCommand.CommandText = "SELECT 
                                   d.id_karyawan AS 'ID',
                                   d.nik AS 'NIK',
-                                  d.nama AS 'Nama Karyawan',
+                                  d.nama_karyawan AS 'Nama Karyawan',
                                   d.alamat AS 'Alamat',
                                   j.nama_jabatan AS 'Jabatan'
-                                  FROM data_karyawan d
+                                  FROM karyawan d
                                   LEFT JOIN jabatan j ON d.id_jabatan = j.id_jabatan"
         sqlRead = sqlCommand.ExecuteReader
 
@@ -79,10 +79,10 @@ Public Class Fungsi
             sqlCommand.Connection = dbConn
             sqlCommand.CommandText = "SELECT d.id_karyawan,
                                   d.nik, 
-                                  d.nama, 
+                                  d.nama_karyawan, 
                                   d.alamat, 
                                   j.nama_jabatan
-                                  FROM data_karyawan d JOIN jabatan j
+                                  FROM karyawan d JOIN jabatan j
                                   ON d.id_jabatan=j.id_jabatan WHERE id_karyawan='" & ID & "';"
 
             sqlRead = sqlCommand.ExecuteReader
@@ -113,9 +113,9 @@ Public Class Fungsi
 
         dbConn.Open()
         sqlCommand.Connection = dbConn
-        sqlQuery = "UPDATE data_karyawan SET " &
+        sqlQuery = "UPDATE karyawan SET " &
                        "nik='" & nik & "', " &
-                       "nama='" & nama & "', " &
+                       "nama_karyawan='" & nama & "', " &
                        "alamat='" & alamat & "', " &
                        "id_jabatan=(SELECT id_jabatan FROM jabatan WHERE nama_jabatan='" & jabatan & "') " &
                        "WHERE id_karyawan=" & ID
@@ -133,7 +133,7 @@ Public Class Fungsi
         Try
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            sqlQuery = "DELETE FROM data_karyawan WHERE id_karyawan = '" & ID & "'"
+            sqlQuery = "DELETE FROM karyawan WHERE id_karyawan = '" & ID & "'"
 
             Debug.WriteLine(sqlQuery)
 
