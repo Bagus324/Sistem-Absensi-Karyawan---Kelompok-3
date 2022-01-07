@@ -10,6 +10,7 @@ Public Class Absensi
     Private tanggal As String
     Private absen_masuk As String
     Private absen_keluar As String
+    Private ganti_status As String
     Private absensi_item As New List(Of String)
 
 
@@ -79,6 +80,15 @@ Public Class Absensi
         End Set
     End Property
 
+    Public Property GantiStatusAbsensiProperty() As String
+        Get
+            Return ganti_status
+        End Get
+        Set(ByVal value As String)
+            ganti_status = value
+        End Set
+    End Property
+
     Public Function ConvertAbsensiToString(vals As List(Of String))
         Dim builder As StringBuilder = New StringBuilder()
         For Each val As String In vals
@@ -103,10 +113,11 @@ Public Class Absensi
         dbConn.Open()
         sqlCommand.Connection = dbConn
         sqlCommand.CommandText = "SELECT id_absensi AS 'ID',
-                                nama_karyawan AS 'Nama Karyawan',
+                                id_karyawan AS 'id Karyawan',
                                 tanggal_absensi  AS 'Tanggal Absensi ',
                                 waktu_absen_masuk AS 'Waktu Absen Masuk',
-                                waktu_absen_keluar AS 'Waktu Absen Keluar'
+                                waktu_absen_keluar AS 'Waktu Absen Keluar',
+                                ganti_status AS 'ganti status '
                                 FROM absensi"
 
         sqlRead = sqlCommand.ExecuteReader
@@ -116,12 +127,9 @@ Public Class Absensi
         dbConn.Close()
         Return result
     End Function
-    Public Function AddDataAbsensiDatabase(nama_karyawan As String,
+    Public Function AddDataAbsensiDatabase(nama As String,
                                           tanggal_absensi As String,
-                                          waktu_absen_masuk As String,
-                                          waktu_absen_keluar As String)
-
-
+                                          waktu_absen_masuk As String)
 
 
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" + "password=" + password + ";" + "database =" + database
@@ -129,14 +137,13 @@ Public Class Absensi
 
         dbConn.Open()
         sqlCommand.Connection = dbConn
-        sqlQuery = "INSERT INTO absensi (nama_karyawan, tanggal_absensi,
-                           waktu_absen_masuk, waktu_absen_keluar) VALUE(
+        sqlQuery = "INSERT INTO absensi (id_karyawan, tanggal_absensi,
+                           waktu_absen_masuk) VALUE(
 
                
-                '" & nama_karyawan & "', 
+                (select id_karyawan from karyawan where nama_karyawan='" & nama & "'),
                 '" & tanggal_absensi & "', 
-                '" & waktu_absen_masuk & "', 
-                '" & waktu_absen_keluar & "')"
+                '" & waktu_absen_masuk & "')"
 
 
         sqlCommand = New MySqlCommand(sqlQuery, dbConn)
@@ -155,6 +162,69 @@ Public Class Absensi
 
     End Function
 
+    Public Function UptDataAbsensiDatabase(nama As String,
+                                          tanggal_absensi As String,
+                                          waktu_absen_keluar As String)
+        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" + "password=" + password + ";" + "database =" + database
+
+
+        dbConn.Open()
+        sqlCommand.Connection = dbConn
+        sqlQuery = "UPDATE absensi SET waktu_absen_keluar = '" & waktu_absen_keluar & "' 
+                    WHERE nama_karyawan='" & nama & "' AND tanggal_absensi = '" & tanggal_absensi & "'"
+
+
+        sqlCommand = New MySqlCommand(sqlQuery, dbConn)
+        sqlRead = sqlCommand.ExecuteReader
+        dbConn.Close()
+
+        sqlRead.Close()
+        dbConn.Close()
+
+
+    End Function
+
+    Public Function Upt2DataAbsensiDatabase(nama As String,
+                                          tanggal_absensi As String,
+                                         ganti_status_absensi As String)
+        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" + "password=" + password + ";" + "database =" + database
+
+
+        dbConn.Open()
+        sqlCommand.Connection = dbConn
+        sqlQuery = "UPDATE absensi SET ganti_status_absensi = '" & ganti_status_absensi & "' 
+                    WHERE nama = '" & nama & "' AND tanggal_absensi = '" & tanggal_absensi & "'"
+
+
+        sqlCommand = New MySqlCommand(sqlQuery, dbConn)
+        sqlRead = sqlCommand.ExecuteReader
+        dbConn.Close()
+
+        sqlRead.Close()
+        dbConn.Close()
+
+
+    End Function
+
+    Public Function CmBnama() As List(Of String)
+        Dim result As New List(Of String)
+
+        dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" + "password = " + password + ";" + "database = " + database
+        dbConn.Open()
+        sqlCommand.Connection = dbConn
+        sqlCommand.CommandText = "SELECT nama_karyawan FROM karyawan"
+        sqlRead = sqlCommand.ExecuteReader
+
+        While sqlRead.Read
+            result.Add(sqlRead.GetString(0).ToString())
+        End While
+        sqlRead.Close()
+        dbConn.Close()
+        Return result
+    End Function
+
+
+
     Public Function getDataAbsensiByIDDatabase(ID As Integer) As List(Of String)
         Dim result As New List(Of String)
 
@@ -162,10 +232,11 @@ Public Class Absensi
         dbConn.Open()
         sqlCommand.Connection = dbConn
         sqlCommand.CommandText = "SELECT id_absensi,
-                                nama_karyawan,
+                                id_karyawan,
                                 tanggal_absensi,
                                 waktu_absen_masuk, 
-                                waktu_absen_keluar 
+                                waktu_absen_keluar,
+                                ganti_status_absensi,
                                 FROM absensi 
                                 WHERE id_absensi='" & ID & "'"
         sqlRead = sqlCommand.ExecuteReader
@@ -175,6 +246,7 @@ Public Class Absensi
             result.Add(sqlRead.GetString(2).ToString())
             result.Add(sqlRead.GetString(3).ToString())
             result.Add(sqlRead.GetString(4).ToString())
+            result.Add(sqlRead.GetString(5).ToString())
 
 
         End While

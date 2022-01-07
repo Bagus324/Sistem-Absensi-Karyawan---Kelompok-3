@@ -32,6 +32,7 @@ Partial Class FormAbsensi
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.BtnHapusAbsensi = New System.Windows.Forms.Button()
         Me.BtnTampilan = New System.Windows.Forms.Button()
+        Me.GantiStatusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripFormAbsensi.SuspendLayout()
         CType(Me.DataGridViewAbsensi, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -54,7 +55,7 @@ Partial Class FormAbsensi
         'ToolStripDropDownButton1
         '
         Me.ToolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AbsensiMasukToolStripMenuItem, Me.AbsensiKeluarToolStripMenuItem})
+        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AbsensiMasukToolStripMenuItem, Me.AbsensiKeluarToolStripMenuItem, Me.GantiStatusToolStripMenuItem})
         Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
         Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(13, 22)
@@ -63,13 +64,13 @@ Partial Class FormAbsensi
         'AbsensiMasukToolStripMenuItem
         '
         Me.AbsensiMasukToolStripMenuItem.Name = "AbsensiMasukToolStripMenuItem"
-        Me.AbsensiMasukToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.AbsensiMasukToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AbsensiMasukToolStripMenuItem.Text = "Absensi Masuk"
         '
         'AbsensiKeluarToolStripMenuItem
         '
         Me.AbsensiKeluarToolStripMenuItem.Name = "AbsensiKeluarToolStripMenuItem"
-        Me.AbsensiKeluarToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.AbsensiKeluarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AbsensiKeluarToolStripMenuItem.Text = "Absensi Keluar"
         '
         'DataGridViewAbsensi
@@ -111,6 +112,12 @@ Partial Class FormAbsensi
         Me.BtnTampilan.Text = "Tampilkan"
         Me.BtnTampilan.UseVisualStyleBackColor = True
         '
+        'GantiStatusToolStripMenuItem
+        '
+        Me.GantiStatusToolStripMenuItem.Name = "GantiStatusToolStripMenuItem"
+        Me.GantiStatusToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.GantiStatusToolStripMenuItem.Text = "Ganti Status"
+        '
         'FormAbsensi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -141,4 +148,5 @@ Partial Class FormAbsensi
     Friend WithEvents BtnEdit As Button
     Friend WithEvents BtnHapusAbsensi As Button
     Friend WithEvents BtnTampilan As Button
+    Friend WithEvents GantiStatusToolStripMenuItem As ToolStripMenuItem
 End Class

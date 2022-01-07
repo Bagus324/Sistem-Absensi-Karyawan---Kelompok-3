@@ -8,16 +8,18 @@
         ' Add any initialization after the InitializeComponent() call.
 
     End Sub
-    Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
+
+    Private Sub BtnStatus_Click(sender As Object, e As EventArgs) Handles BtnStatus.Click
         FormAbsensi.absensi.namaProperty = TextBoxNama.Text
         FormAbsensi.absensi.TanggalProperty = DtpTanggal.Value.ToString("yyyy/MM/dd")
-        FormAbsensi.absensi.AbsenMasukProperty = DtpAbsenMasuk.Value.ToString("HH:mm:ss")
-        FormAbsensi.absensi.AbsenKeluarProperty = DtpAbsenKeluar.Value.ToString("HH:mm:ss")
+        FormAbsensi.absensi.GantiStatusAbsensiProperty = ComboBoxStatus.Text
 
-        FormAbsensi.absensi.AddDataAbsensiDatabase(FormAbsensi.absensi.namaProperty,
+
+        'Dim convertedAbsensi = FormAbsensi.absensi.ConvertAbsensiToString(FormAbsensi.absensi.getAbsensiItem)
+
+        FormAbsensi.absensi.Upt2DataAbsensiDatabase(FormAbsensi.absensi.namaProperty,
                                                 FormAbsensi.absensi.TanggalProperty,
-                                                FormAbsensi.absensi.AbsenMasukProperty,
-                                                FormAbsensi.absensi.AbsenKeluarProperty)
+                                                FormAbsensi.absensi.GantiStatusAbsensiProperty)
 
         Dim infotambahabsensi = New InfoAbsensi
 

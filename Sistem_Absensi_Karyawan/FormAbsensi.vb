@@ -4,6 +4,7 @@
 
     Public Shared selectedabsensi As String
     Public Shared selectedTableAbsensi As String
+    Public Shared selectedTableAbsensiNama As String
     Public Sub New()
 
         absensi = New Absensi()
@@ -32,6 +33,8 @@
         formabsensimasuk.Show()
     End Sub
 
+
+
     Private Sub BtnTampilan_Click(sender As Object, e As EventArgs) Handles BtnTampilan.Click
         Dim selectedabsensi As List(Of String) = absensi.getDataAbsensiByIDDatabase(selectedTableAbsensi)
 
@@ -59,5 +62,24 @@
         editabsen.Show()
 
 
+    End Sub
+
+    Private Sub DataGridViewAbsensi_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewAbsensi.CellClick
+        Dim index As Integer = e.RowIndex
+        Dim selectedrow As DataGridViewRow
+        selectedrow = DataGridViewAbsensi.Rows(index)
+
+        selectedTableAbsensi = selectedrow.Cells(0).Value
+        selectedTableAbsensiNama = selectedrow.Cells(1).Value
+    End Sub
+
+    Private Sub AbsensiKeluarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AbsensiKeluarToolStripMenuItem.Click
+        Dim formabsensikeluar = New FormAbsensiKeluar()
+        formabsensikeluar.Show()
+    End Sub
+
+    Private Sub GantiStatusToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GantiStatusToolStripMenuItem.Click
+        Dim gantistatus = New GantiStatusAbsensi()
+        gantistatus.Show()
     End Sub
 End Class

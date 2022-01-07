@@ -22,25 +22,16 @@ Partial Class FormAbsensiMasuk
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBoxNama = New System.Windows.Forms.TextBox()
         Me.LblAbsenMasuk = New System.Windows.Forms.Label()
         Me.LblNama = New System.Windows.Forms.Label()
         Me.lblabsensi = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DtpAbsenMasuk = New System.Windows.Forms.DateTimePicker()
-        Me.LblAbsenKeluar = New System.Windows.Forms.Label()
-        Me.DtpAbsenKeluar = New System.Windows.Forms.DateTimePicker()
         Me.LblTanggal = New System.Windows.Forms.Label()
         Me.DtpTanggal = New System.Windows.Forms.DateTimePicker()
         Me.BtnTambahAbsensi = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
-        '
-        'TextBoxNama
-        '
-        Me.TextBoxNama.Location = New System.Drawing.Point(327, 124)
-        Me.TextBoxNama.Name = "TextBoxNama"
-        Me.TextBoxNama.Size = New System.Drawing.Size(225, 20)
-        Me.TextBoxNama.TabIndex = 13
         '
         'LblAbsenMasuk
         '
@@ -92,26 +83,6 @@ Partial Class FormAbsensiMasuk
         Me.DtpAbsenMasuk.TabIndex = 27
         Me.DtpAbsenMasuk.Value = New Date(2022, 1, 5, 11, 13, 41, 0)
         '
-        'LblAbsenKeluar
-        '
-        Me.LblAbsenKeluar.AutoSize = True
-        Me.LblAbsenKeluar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblAbsenKeluar.Location = New System.Drawing.Point(111, 239)
-        Me.LblAbsenKeluar.Name = "LblAbsenKeluar"
-        Me.LblAbsenKeluar.Size = New System.Drawing.Size(154, 20)
-        Me.LblAbsenKeluar.TabIndex = 28
-        Me.LblAbsenKeluar.Text = "Waktu Absen Keluar"
-        '
-        'DtpAbsenKeluar
-        '
-        Me.DtpAbsenKeluar.CustomFormat = "HH:mm"
-        Me.DtpAbsenKeluar.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DtpAbsenKeluar.Location = New System.Drawing.Point(327, 238)
-        Me.DtpAbsenKeluar.Name = "DtpAbsenKeluar"
-        Me.DtpAbsenKeluar.ShowUpDown = True
-        Me.DtpAbsenKeluar.Size = New System.Drawing.Size(225, 20)
-        Me.DtpAbsenKeluar.TabIndex = 29
-        '
         'LblTanggal
         '
         Me.LblTanggal.AutoSize = True
@@ -139,20 +110,26 @@ Partial Class FormAbsensiMasuk
         Me.BtnTambahAbsensi.Text = "Tambah Absensi"
         Me.BtnTambahAbsensi.UseVisualStyleBackColor = True
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(327, 122)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(225, 21)
+        Me.ComboBox1.TabIndex = 33
+        '
         'FormAbsensiMasuk
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.BtnTambahAbsensi)
         Me.Controls.Add(Me.DtpTanggal)
         Me.Controls.Add(Me.LblTanggal)
-        Me.Controls.Add(Me.DtpAbsenKeluar)
-        Me.Controls.Add(Me.LblAbsenKeluar)
         Me.Controls.Add(Me.DtpAbsenMasuk)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblabsensi)
-        Me.Controls.Add(Me.TextBoxNama)
         Me.Controls.Add(Me.LblAbsenMasuk)
         Me.Controls.Add(Me.LblNama)
         Me.Name = "FormAbsensiMasuk"
@@ -161,15 +138,13 @@ Partial Class FormAbsensiMasuk
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TextBoxNama As TextBox
     Friend WithEvents LblAbsenMasuk As Label
     Friend WithEvents LblNama As Label
     Friend WithEvents lblabsensi As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents DtpAbsenMasuk As DateTimePicker
-    Friend WithEvents LblAbsenKeluar As Label
-    Friend WithEvents DtpAbsenKeluar As DateTimePicker
     Friend WithEvents LblTanggal As Label
     Friend WithEvents DtpTanggal As DateTimePicker
     Friend WithEvents BtnTambahAbsensi As Button
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

@@ -118,6 +118,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Absensi.vb" />
+    <Compile Include="FormAbsensiKeluar.Designer.vb">
+      <DependentUpon>FormAbsensiKeluar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAbsensiKeluar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GantiStatusAbsensi.Designer.vb">
       <DependentUpon>GantiStatusAbsensi.vb</DependentUpon>
     </Compile>
@@ -186,6 +192,9 @@
     <Compile Include="Users.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormAbsensiKeluar.resx">
+      <DependentUpon>FormAbsensiKeluar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GantiStatusAbsensi.resx">
       <DependentUpon>GantiStatusAbsensi.vb</DependentUpon>
     </EmbeddedResource>
