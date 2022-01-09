@@ -10,7 +10,7 @@ Public Class Fungsi
     Private username As String = "root"
     Private password As String = ""
     Private database As String = "sistemabsensikaryawan"
-    'sampe sini ya
+    'sampe sini ya cuy
     '======================================================
     'GS
     Private Shared nama As String
