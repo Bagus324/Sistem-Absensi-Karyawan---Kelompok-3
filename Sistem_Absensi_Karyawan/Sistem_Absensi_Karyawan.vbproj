@@ -117,10 +117,45 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Edit.Designer.vb">
       <DependentUpon>Edit.vb</DependentUpon>
     </Compile>
     <Compile Include="Edit.vb">
+=======
+    <Compile Include="Absensi.vb" />
+    <Compile Include="FormAbsensiKeluar.Designer.vb">
+      <DependentUpon>FormAbsensiKeluar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAbsensiKeluar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GantiStatusAbsensi.Designer.vb">
+      <DependentUpon>GantiStatusAbsensi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GantiStatusAbsensi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbsensi.Designer.vb">
+      <DependentUpon>FormAbsensi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAbsensi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HapusAbsensi.Designer.vb">
+      <DependentUpon>HapusAbsensi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HapusAbsensi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoAbsensi.Designer.vb">
+      <DependentUpon>InfoAbsensi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InfoAbsensi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.vb">
+>>>>>>> origin/mdwikihermansyah
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditJabatan.Designer.vb">
@@ -177,6 +212,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Penggajian.Designer.vb">
       <DependentUpon>Penggajian.vb</DependentUpon>
     </Compile>
@@ -217,6 +253,46 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Karyawan.resx">
       <DependentUpon>Karyawan.vb</DependentUpon>
+=======
+    <Compile Include="SignIn.Designer.vb">
+      <DependentUpon>SignIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SignIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp.Designer.vb">
+      <DependentUpon>SignUp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbsensiMasuk.Designer.vb">
+      <DependentUpon>FormAbsensiMasuk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAbsensiMasuk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormAbsensiKeluar.resx">
+      <DependentUpon>FormAbsensiKeluar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GantiStatusAbsensi.resx">
+      <DependentUpon>GantiStatusAbsensi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAbsensi.resx">
+      <DependentUpon>FormAbsensi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HapusAbsensi.resx">
+      <DependentUpon>HapusAbsensi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoAbsensi.resx">
+      <DependentUpon>InfoAbsensi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+>>>>>>> origin/mdwikihermansyah
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -224,11 +300,22 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="TambahJabatan.resx">
       <DependentUpon>TambahJabatan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TambahKaryawan.resx">
       <DependentUpon>TambahKaryawan.vb</DependentUpon>
+=======
+    <EmbeddedResource Include="SignIn.resx">
+      <DependentUpon>SignIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAbsensiMasuk.resx">
+      <DependentUpon>FormAbsensiMasuk.vb</DependentUpon>
+>>>>>>> origin/mdwikihermansyah
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -243,6 +330,12 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+<<<<<<< HEAD
+=======
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus.png" />
+>>>>>>> origin/mdwikihermansyah
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
