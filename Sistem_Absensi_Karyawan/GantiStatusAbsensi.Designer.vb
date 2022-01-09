@@ -27,10 +27,10 @@ Partial Class GantiStatusAbsensi
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DtpTanggal = New System.Windows.Forms.DateTimePicker()
-        Me.TextBoxNama = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ComboBoxStatus = New System.Windows.Forms.ComboBox()
         Me.Lblsatatus = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'lblstatus
@@ -79,13 +79,6 @@ Partial Class GantiStatusAbsensi
         Me.DtpTanggal.Size = New System.Drawing.Size(225, 20)
         Me.DtpTanggal.TabIndex = 53
         '
-        'TextBoxNama
-        '
-        Me.TextBoxNama.Location = New System.Drawing.Point(362, 145)
-        Me.TextBoxNama.Name = "TextBoxNama"
-        Me.TextBoxNama.Size = New System.Drawing.Size(225, 20)
-        Me.TextBoxNama.TabIndex = 50
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -114,16 +107,24 @@ Partial Class GantiStatusAbsensi
         Me.Lblsatatus.TabIndex = 56
         Me.Lblsatatus.Text = "Status"
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(362, 144)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(225, 21)
+        Me.ComboBox1.TabIndex = 57
+        '
         'GantiStatusAbsensi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Lblsatatus)
         Me.Controls.Add(Me.ComboBoxStatus)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.DtpTanggal)
-        Me.Controls.Add(Me.TextBoxNama)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.BtnStatus)
@@ -139,8 +140,8 @@ Partial Class GantiStatusAbsensi
     Friend WithEvents Label1 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents DtpTanggal As DateTimePicker
-    Friend WithEvents TextBoxNama As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents ComboBoxStatus As ComboBox
     Friend WithEvents Lblsatatus As Label
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

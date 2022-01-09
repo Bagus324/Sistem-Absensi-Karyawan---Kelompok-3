@@ -80,7 +80,7 @@ Public Class Absensi
         End Set
     End Property
 
-    Public Property GantiStatusAbsensiProperty() As String
+    Public Property GantiStatusProperty() As String
         Get
             Return ganti_status
         End Get
@@ -186,13 +186,14 @@ Public Class Absensi
 
     Public Function Upt2DataAbsensiDatabase(nama As String,
                                           tanggal_absensi As String,
-                                         ganti_status_absensi As String)
+                                         ganti_status As String)
+
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" + "password=" + password + ";" + "database =" + database
 
 
         dbConn.Open()
         sqlCommand.Connection = dbConn
-        sqlQuery = "UPDATE absensi SET ganti_status_absensi = '" & ganti_status_absensi & "' 
+        sqlQuery = "UPDATE absensi SET ganti_status = '" & ganti_status & "' 
                     WHERE nama = '" & nama & "' AND tanggal_absensi = '" & tanggal_absensi & "'"
 
 
