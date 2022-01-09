@@ -54,7 +54,7 @@ Partial Class Hitung
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(174, 241)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(0, 21)
+        Me.Label3.Size = New System.Drawing.Size(0, 17)
         Me.Label3.TabIndex = 2
         '
         'Label5
@@ -99,7 +99,7 @@ Partial Class Hitung
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(296, 193)
+        Me.ClientSize = New System.Drawing.Size(466, 358)
         Me.Controls.Add(Me.RadioButton2)
         Me.Controls.Add(Me.RadioButton1)
         Me.Controls.Add(Me.TextBox1)

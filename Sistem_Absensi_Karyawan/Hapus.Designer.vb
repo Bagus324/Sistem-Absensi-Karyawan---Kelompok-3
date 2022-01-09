@@ -23,7 +23,7 @@ Partial Class Hapus
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.LblGaji = New System.Windows.Forms.Label()
         Me.BtnHapus = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -36,14 +36,14 @@ Partial Class Hapus
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Apakah Anda Ingin Menghapus"
         '
-        'Label2
+        'LblGaji
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(133, 89)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(51, 17)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Label2"
+        Me.LblGaji.AutoSize = True
+        Me.LblGaji.Location = New System.Drawing.Point(133, 89)
+        Me.LblGaji.Name = "LblGaji"
+        Me.LblGaji.Size = New System.Drawing.Size(51, 17)
+        Me.LblGaji.TabIndex = 1
+        Me.LblGaji.Text = "Label2"
         '
         'BtnHapus
         '
@@ -60,7 +60,7 @@ Partial Class Hapus
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(338, 245)
         Me.Controls.Add(Me.BtnHapus)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.LblGaji)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Hapus"
         Me.Text = "Hapus"
@@ -70,6 +70,6 @@ Partial Class Hapus
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents LblGaji As Label
     Friend WithEvents BtnHapus As Button
 End Class
