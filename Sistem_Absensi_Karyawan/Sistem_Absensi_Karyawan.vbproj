@@ -14,6 +14,21 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -118,6 +133,7 @@
   </ItemGroup>
   <ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="Edit.Designer.vb">
       <DependentUpon>Edit.vb</DependentUpon>
     </Compile>
@@ -128,6 +144,28 @@
       <DependentUpon>FormAbsensiKeluar.vb</DependentUpon>
     </Compile>
     <Compile Include="FormAbsensiKeluar.vb">
+=======
+    <Compile Include="Gaji.vb" />
+    <Compile Include="Hapus.Designer.vb">
+      <DependentUpon>Hapus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hapus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hitung.Designer.vb">
+      <DependentUpon>Hitung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hitung.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="infoupdategaji.Designer.vb">
+      <DependentUpon>infoupdategaji.vb</DependentUpon>
+    </Compile>
+    <Compile Include="infoupdategaji.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.vb">
+>>>>>>> origin/Daffahakim
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GantiStatusAbsensi.Designer.vb">
@@ -213,12 +251,16 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/Daffahakim
     <Compile Include="Penggajian.Designer.vb">
       <DependentUpon>Penggajian.vb</DependentUpon>
     </Compile>
     <Compile Include="Penggajian.vb">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="TambahJabatan.Designer.vb">
       <DependentUpon>TambahJabatan.vb</DependentUpon>
     </Compile>
@@ -229,10 +271,17 @@
       <DependentUpon>TambahKaryawan.vb</DependentUpon>
     </Compile>
     <Compile Include="TambahKaryawan.vb">
+=======
+    <Compile Include="Ubah.Designer.vb">
+      <DependentUpon>Ubah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ubah.vb">
+>>>>>>> origin/Daffahakim
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="Edit.resx">
       <DependentUpon>Edit.vb</DependentUpon>
     </EmbeddedResource>
@@ -289,6 +338,16 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InfoAbsensi.resx">
       <DependentUpon>InfoAbsensi.vb</DependentUpon>
+=======
+    <EmbeddedResource Include="Hapus.resx">
+      <DependentUpon>Hapus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hitung.resx">
+      <DependentUpon>Hitung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="infoupdategaji.resx">
+      <DependentUpon>infoupdategaji.vb</DependentUpon>
+>>>>>>> origin/Daffahakim
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
@@ -300,6 +359,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <EmbeddedResource Include="TambahJabatan.resx">
       <DependentUpon>TambahJabatan.vb</DependentUpon>
@@ -316,6 +376,13 @@
     <EmbeddedResource Include="FormAbsensiMasuk.resx">
       <DependentUpon>FormAbsensiMasuk.vb</DependentUpon>
 >>>>>>> origin/mdwikihermansyah
+=======
+    <EmbeddedResource Include="Penggajian.resx">
+      <DependentUpon>Penggajian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ubah.resx">
+      <DependentUpon>Ubah.vb</DependentUpon>
+>>>>>>> origin/Daffahakim
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -331,11 +398,26 @@
     <None Include="App.config" />
     <None Include="packages.config" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Plus.png" />
 >>>>>>> origin/mdwikihermansyah
+=======
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+>>>>>>> origin/Daffahakim
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

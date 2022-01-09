@@ -33,10 +33,14 @@ Namespace My
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
 <<<<<<< HEAD
+<<<<<<< HEAD
             Me.MainForm = Global.Sistem_Absensi_Karyawan.home
 =======
             Me.MainForm = Global.Sistem_Absensi_Karyawan.SignIn
 >>>>>>> origin/mdwikihermansyah
+=======
+            Me.MainForm = Global.Sistem_Absensi_Karyawan.Penggajian
+>>>>>>> origin/Daffahakim
         End Sub
     End Class
 End Namespace
