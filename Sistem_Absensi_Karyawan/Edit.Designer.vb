@@ -31,6 +31,7 @@ Partial Class Edit
         Me.RTXAlamat = New System.Windows.Forms.RichTextBox()
         Me.LblNIK = New System.Windows.Forms.Label()
         Me.LblNama = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'BtnEdit
@@ -109,11 +110,22 @@ Partial Class Edit
         Me.LblNama.TabIndex = 9
         Me.LblNama.Text = "Nama"
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(140, 328)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(175, 18)
+        Me.Label1.TabIndex = 18
+        Me.Label1.Text = "Penting : Pilih Jabatan"
+        '
         'Edit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BtnEdit)
         Me.Controls.Add(Me.TbNIK)
         Me.Controls.Add(Me.TbNama)
@@ -139,4 +151,5 @@ Partial Class Edit
     Friend WithEvents RTXAlamat As RichTextBox
     Friend WithEvents LblNIK As Label
     Friend WithEvents LblNama As Label
+    Friend WithEvents Label1 As Label
 End Class

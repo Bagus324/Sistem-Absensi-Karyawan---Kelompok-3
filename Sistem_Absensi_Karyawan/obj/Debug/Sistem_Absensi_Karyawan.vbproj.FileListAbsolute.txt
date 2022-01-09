@@ -51,3 +51,4 @@ C:\Users\bagus\source\repos\Sistem-Absensi-Karyawan---Kelompok-3\Sistem_Absensi_
 C:\Users\bagus\source\repos\Sistem-Absensi-Karyawan---Kelompok-3\Sistem_Absensi_Karyawan\obj\Debug\Sistem_Absensi_Karyawan.TambahJabatan.resources
 C:\Users\bagus\source\repos\Sistem-Absensi-Karyawan---Kelompok-3\Sistem_Absensi_Karyawan\obj\Debug\Sistem_Absensi_Karyawan.EditJabatan.resources
 C:\Users\bagus\source\repos\Sistem-Absensi-Karyawan---Kelompok-3\Sistem_Absensi_Karyawan\obj\Debug\Sistem_Absensi_Karyawan.HapusJabatan.resources
+C:\Users\bagus\source\repos\Sistem-Absensi-Karyawan---Kelompok-3\Sistem_Absensi_Karyawan\obj\Debug\Sistem_Absensi_Karyawan.home.resources

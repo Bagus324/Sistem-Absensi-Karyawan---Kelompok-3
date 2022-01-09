@@ -16,8 +16,6 @@ Public Class Fungsi
     Private Shared nama As String
     Private Shared nik As String
     Private Shared alamat As String
-    Private Shared id_jabatan As String
-    Private Shared jabatan As String
     Private Shared namaJabatan As String
     Private Shared gajih As String
     '==================================================KARYAWAN====================================
