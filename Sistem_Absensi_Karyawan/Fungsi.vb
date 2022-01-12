@@ -10,7 +10,7 @@ Public Class Fungsi
     Private username As String = "root"
     Private password As String = ""
     Private database As String = "sistemabsensikaryawan"
-    'sampe sini ya cuy1
+    'sampe sini
     '======================================================
     'GS
     Private Shared nama As String
@@ -18,6 +18,67 @@ Public Class Fungsi
     Private Shared alamat As String
     Private Shared namaJabatan As String
     Private Shared gajih As String
+    Private Shared tgajih As String
+    Private Shared bulan As String
+    '==================================================Penggajigan=================================
+    Public Function GetDataGajiDatabase() As DataTable
+        Dim result As New DataTable
+
+        dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" + "password = " + password + ";" + "database = " + database
+        dbConn.Open()
+        sqlCommand.Connection = dbConn
+        sqlCommand.CommandText = "SELECT id_data, id_karyawan, id_bulan, total_gajih FROM penggajian"
+        sqlRead = sqlCommand.ExecuteReader
+
+        result.Load(sqlRead)
+        sqlRead.Close()
+        dbConn.Close()
+        Return result
+    End Function
+    Public Function GetDataGajiByIDDatabase(ID As Integer) As List(Of String)
+        Try
+            Dim result As New List(Of String)
+
+            dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" + "password = " + password + ";" + "database = " + database
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlCommand.CommandText = "SELECT id_data, id_karyawan, id_bulan, total_gajih FROM penggajian WHERE id_data='" & ID & "';"
+
+            sqlRead = sqlCommand.ExecuteReader
+            While sqlRead.Read
+                result.Add(sqlRead.GetString(0).ToString())
+                result.Add(sqlRead.GetString(1).ToString())
+                result.Add(sqlRead.GetString(2).ToString())
+                result.Add(sqlRead.GetString(3).ToString())
+            End While
+            sqlRead.Close()
+            dbConn.Close()
+            Return result
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString)
+        End Try
+    End Function
+    Public Function ngitung(ID As Integer) As List(Of String)
+        Try
+            Dim result As New List(Of String)
+
+            dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" + "password = " + password + ";" + "database = " + database
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlCommand.CommandText = "SELECT waktu_absen_masuk, waktu_absen_keluar FROM absensi WHERE id_absensi='13';"
+
+            sqlRead = sqlCommand.ExecuteReader
+            While sqlRead.Read
+                result.Add(sqlRead.GetString(0).ToString())
+                result.Add(sqlRead.GetString(1).ToString())
+            End While
+            sqlRead.Close()
+            dbConn.Close()
+            Return result
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString)
+        End Try
+    End Function
     '==================================================KARYAWAN====================================
     Public Function AddDataKaryawanDatabase(nik As String,
                                         nama As String,
@@ -44,7 +105,6 @@ Public Class Fungsi
             dbConn.Dispose()
         End Try
     End Function
-
     Public Function GetDataKaryawanDatabase() As DataTable
         Dim result As New DataTable
 
@@ -66,8 +126,6 @@ Public Class Fungsi
         dbConn.Close()
         Return result
     End Function
-
-
     Public Function GetDataKaryawanByIDDatabase(ID As Integer) As List(Of String)
         Try
             Dim result As New List(Of String)
@@ -99,8 +157,6 @@ Public Class Fungsi
             MessageBox.Show(ex.ToString)
         End Try
     End Function
-
-
     Public Function UpdateDataKaryawanByIDDatabase(ID As Integer,
                                                   nik As String,
                                                   nama As String,
@@ -124,7 +180,6 @@ Public Class Fungsi
         dbConn.Close()
         sqlRead.Close()
     End Function
-
     Public Function DeleteDataByIDDatabase(ID As Integer)
         dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" + "password = " + password + ";" + "database = " + database
 
@@ -288,7 +343,6 @@ Public Class Fungsi
             gajih = value
         End Set
     End Property
-
     Public Property nikKaryawan() As String
         Get
             Return nik
@@ -297,13 +351,28 @@ Public Class Fungsi
             nik = value
         End Set
     End Property
-
     Public Property alamatKaryawan() As String
         Get
             Return alamat
         End Get
         Set(ByVal value As String)
             alamat = value
+        End Set
+    End Property
+    Public Property TotalGajih() As String
+        Get
+            Return tgajih
+        End Get
+        Set(ByVal value As String)
+            tgajih = value
+        End Set
+    End Property
+    Public Property BulanGS() As String
+        Get
+            Return bulan
+        End Get
+        Set(ByVal value As String)
+            bulan = value
         End Set
     End Property
 End Class
