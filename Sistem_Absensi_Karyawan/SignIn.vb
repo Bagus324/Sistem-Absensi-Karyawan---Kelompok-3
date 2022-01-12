@@ -1,6 +1,7 @@
 ﻿Public Class SignIn
     Public Shadows Users As Users
-    Public Shared FormAbsensi As FormAbsensi
+    Public Shared Absensi As FormAbsensi
+    Public Shared daftar As SignUp
 
     Public Sub New()
 
@@ -8,25 +9,28 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        FormAbsensi = New FormAbsensi()
         Users = New Users()
     End Sub
     Private Sub BtnSignIn_Click(sender As Object, e As EventArgs) Handles BtnSignIn.Click
         Dim plainUsername As String = TextBoxUsername.Text
         Dim plainPassword As String = TextBoxPassword.Text
+        Absensi = New FormAbsensi
+
 
         Dim data_users As List(Of String) = Users.CheckAuthDatabase(plainUsername, plainPassword)
+
         If data_users.Count > 0 Then
             Users.UsernameProperty = data_users(1)
-            FormAbsensi.Show()
+            Absensi.Show()
             Me.Hide()
         Else
             MessageBox.Show("salah password")
         End If
-
     End Sub
 
     Private Sub BtnSignUp_Click(sender As Object, e As EventArgs) Handles BtnSignUp.Click
-        SignUp.Show()
+        daftar = New SignUp
+        daftar.Show()
     End Sub
+
 End Class

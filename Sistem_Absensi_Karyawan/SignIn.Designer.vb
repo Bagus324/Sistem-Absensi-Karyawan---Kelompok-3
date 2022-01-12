@@ -25,16 +25,10 @@ Partial Class SignIn
         Me.TextBoxUsername = New System.Windows.Forms.TextBox()
         Me.TextBoxPassword = New System.Windows.Forms.TextBox()
         Me.BtnUsername = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.BtnPassword = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.BtnFoto = New System.Windows.Forms.Button()
         Me.BtnSignIn = New System.Windows.Forms.Button()
-        Me.BtnBatal = New System.Windows.Forms.Button()
         Me.BtnSignUp = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBoxUsername
@@ -61,13 +55,6 @@ Partial Class SignIn
         Me.BtnUsername.TabIndex = 2
         Me.BtnUsername.Text = "Username"
         '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(192, 184)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(255, 20)
-        Me.TextBox3.TabIndex = 3
-        '
         'BtnPassword
         '
         Me.BtnPassword.AutoSize = True
@@ -78,33 +65,6 @@ Partial Class SignIn
         Me.BtnPassword.TabIndex = 4
         Me.BtnPassword.Text = "Password"
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(85, 184)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(57, 24)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Email"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(506, 79)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(119, 118)
-        Me.PictureBox1.TabIndex = 6
-        Me.PictureBox1.TabStop = False
-        '
-        'BtnFoto
-        '
-        Me.BtnFoto.Location = New System.Drawing.Point(515, 216)
-        Me.BtnFoto.Name = "BtnFoto"
-        Me.BtnFoto.Size = New System.Drawing.Size(100, 23)
-        Me.BtnFoto.TabIndex = 7
-        Me.BtnFoto.Text = "Tambah Foto"
-        Me.BtnFoto.UseVisualStyleBackColor = True
-        '
         'BtnSignIn
         '
         Me.BtnSignIn.Location = New System.Drawing.Point(388, 286)
@@ -113,15 +73,6 @@ Partial Class SignIn
         Me.BtnSignIn.TabIndex = 8
         Me.BtnSignIn.Text = "Sign In"
         Me.BtnSignIn.UseVisualStyleBackColor = True
-        '
-        'BtnBatal
-        '
-        Me.BtnBatal.Location = New System.Drawing.Point(525, 286)
-        Me.BtnBatal.Name = "BtnBatal"
-        Me.BtnBatal.Size = New System.Drawing.Size(100, 23)
-        Me.BtnBatal.TabIndex = 9
-        Me.BtnBatal.Text = "Batal"
-        Me.BtnBatal.UseVisualStyleBackColor = True
         '
         'BtnSignUp
         '
@@ -149,19 +100,13 @@ Partial Class SignIn
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BtnSignUp)
-        Me.Controls.Add(Me.BtnBatal)
         Me.Controls.Add(Me.BtnSignIn)
-        Me.Controls.Add(Me.BtnFoto)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.BtnPassword)
-        Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.BtnUsername)
         Me.Controls.Add(Me.TextBoxPassword)
         Me.Controls.Add(Me.TextBoxUsername)
         Me.Name = "SignIn"
         Me.Text = "Sign In"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -170,13 +115,8 @@ Partial Class SignIn
     Friend WithEvents TextBoxUsername As TextBox
     Friend WithEvents TextBoxPassword As TextBox
     Friend WithEvents BtnUsername As Label
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents BtnPassword As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents BtnFoto As Button
     Friend WithEvents BtnSignIn As Button
-    Friend WithEvents BtnBatal As Button
     Friend WithEvents BtnSignUp As Button
     Friend WithEvents Label1 As Label
 End Class

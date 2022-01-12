@@ -27,12 +27,13 @@ Partial Class FormAbsensi
         Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
         Me.AbsensiMasukToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AbsensiKeluarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GantiStatusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataGridViewAbsensi = New System.Windows.Forms.DataGridView()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.ListBoxAbsensi = New System.Windows.Forms.ListBox()
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.BtnHapusAbsensi = New System.Windows.Forms.Button()
-        Me.BtnSelect = New System.Windows.Forms.Button()
+        Me.BtnTampilan = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.ToolStripFormAbsensi.SuspendLayout()
         CType(Me.DataGridViewAbsensi, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -55,7 +56,7 @@ Partial Class FormAbsensi
         'ToolStripDropDownButton1
         '
         Me.ToolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AbsensiMasukToolStripMenuItem, Me.AbsensiKeluarToolStripMenuItem})
+        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AbsensiMasukToolStripMenuItem, Me.AbsensiKeluarToolStripMenuItem, Me.GantiStatusToolStripMenuItem})
         Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
         Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(13, 22)
@@ -64,38 +65,36 @@ Partial Class FormAbsensi
         'AbsensiMasukToolStripMenuItem
         '
         Me.AbsensiMasukToolStripMenuItem.Name = "AbsensiMasukToolStripMenuItem"
-        Me.AbsensiMasukToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AbsensiMasukToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.AbsensiMasukToolStripMenuItem.Text = "Absensi Masuk"
         '
         'AbsensiKeluarToolStripMenuItem
         '
         Me.AbsensiKeluarToolStripMenuItem.Name = "AbsensiKeluarToolStripMenuItem"
-        Me.AbsensiKeluarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AbsensiKeluarToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.AbsensiKeluarToolStripMenuItem.Text = "Absensi Keluar"
+        '
+        'GantiStatusToolStripMenuItem
+        '
+        Me.GantiStatusToolStripMenuItem.Name = "GantiStatusToolStripMenuItem"
+        Me.GantiStatusToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.GantiStatusToolStripMenuItem.Text = "Ganti Status"
         '
         'DataGridViewAbsensi
         '
         Me.DataGridViewAbsensi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewAbsensi.Location = New System.Drawing.Point(395, 46)
+        Me.DataGridViewAbsensi.Location = New System.Drawing.Point(125, 45)
         Me.DataGridViewAbsensi.Name = "DataGridViewAbsensi"
-        Me.DataGridViewAbsensi.Size = New System.Drawing.Size(323, 123)
+        Me.DataGridViewAbsensi.Size = New System.Drawing.Size(323, 160)
         Me.DataGridViewAbsensi.TabIndex = 1
         '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'ListBoxAbsensi
-        '
-        Me.ListBoxAbsensi.FormattingEnabled = True
-        Me.ListBoxAbsensi.Location = New System.Drawing.Point(12, 46)
-        Me.ListBoxAbsensi.Name = "ListBoxAbsensi"
-        Me.ListBoxAbsensi.Size = New System.Drawing.Size(354, 225)
-        Me.ListBoxAbsensi.TabIndex = 2
-        '
         'BtnEdit
         '
-        Me.BtnEdit.Location = New System.Drawing.Point(476, 212)
+        Me.BtnEdit.Location = New System.Drawing.Point(127, 246)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(75, 23)
         Me.BtnEdit.TabIndex = 3
@@ -104,31 +103,40 @@ Partial Class FormAbsensi
         '
         'BtnHapusAbsensi
         '
-        Me.BtnHapusAbsensi.Location = New System.Drawing.Point(641, 212)
+        Me.BtnHapusAbsensi.Location = New System.Drawing.Point(373, 246)
         Me.BtnHapusAbsensi.Name = "BtnHapusAbsensi"
         Me.BtnHapusAbsensi.Size = New System.Drawing.Size(75, 23)
         Me.BtnHapusAbsensi.TabIndex = 4
         Me.BtnHapusAbsensi.Text = "Hapus"
         Me.BtnHapusAbsensi.UseVisualStyleBackColor = True
         '
-        'BtnSelect
+        'BtnTampilan
         '
-        Me.BtnSelect.Location = New System.Drawing.Point(560, 212)
-        Me.BtnSelect.Name = "BtnSelect"
-        Me.BtnSelect.Size = New System.Drawing.Size(75, 23)
-        Me.BtnSelect.TabIndex = 5
-        Me.BtnSelect.Text = "Select"
-        Me.BtnSelect.UseVisualStyleBackColor = True
+        Me.BtnTampilan.Location = New System.Drawing.Point(253, 246)
+        Me.BtnTampilan.Name = "BtnTampilan"
+        Me.BtnTampilan.Size = New System.Drawing.Size(75, 23)
+        Me.BtnTampilan.TabIndex = 5
+        Me.BtnTampilan.Text = "Tampilkan"
+        Me.BtnTampilan.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(127, 289)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 6
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'FormAbsensi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.BtnSelect)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.BtnTampilan)
         Me.Controls.Add(Me.BtnHapusAbsensi)
         Me.Controls.Add(Me.BtnEdit)
-        Me.Controls.Add(Me.ListBoxAbsensi)
         Me.Controls.Add(Me.DataGridViewAbsensi)
         Me.Controls.Add(Me.ToolStripFormAbsensi)
         Me.Name = "FormAbsensi"
@@ -146,10 +154,11 @@ Partial Class FormAbsensi
     Friend WithEvents ToolStripDropDownButton1 As ToolStripDropDownButton
     Friend WithEvents DataGridViewAbsensi As DataGridView
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
-    Friend WithEvents ListBoxAbsensi As ListBox
     Friend WithEvents AbsensiMasukToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AbsensiKeluarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BtnEdit As Button
     Friend WithEvents BtnHapusAbsensi As Button
-    Friend WithEvents BtnSelect As Button
+    Friend WithEvents BtnTampilan As Button
+    Friend WithEvents GantiStatusToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Button1 As Button
 End Class
