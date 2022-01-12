@@ -1,6 +1,6 @@
 ﻿Public Class Karyawan
     Public Shared Nambah As TambahKaryawan
-    Public Shared UpdateData As Edit
+    Public Shared UpdateData As EditKaryawan
     Public Shared fungsi As Fungsi
     Public Shared selectedData
     Public Shared selectedNamaData
@@ -40,7 +40,7 @@
         fungsi.alamatKaryawan = column(3)
         fungsi.namaJabatanGS = column(4)
 
-        UpdateData = New Edit
+        UpdateData = New EditKaryawan
         UpdateData.Show()
 
     End Sub
@@ -50,7 +50,7 @@
     End Sub
 
     Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles BtnHapus.Click
-        Dim formDelete = New Hapus()
+        Dim formDelete = New HapusKaryawan()
         formDelete.Show()
     End Sub
 

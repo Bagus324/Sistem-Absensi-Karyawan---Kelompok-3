@@ -1,4 +1,4 @@
-﻿Public Class Edit
+﻿Public Class EditKaryawan
     Public Sub New()
 
         ' This call is required by the designer.
