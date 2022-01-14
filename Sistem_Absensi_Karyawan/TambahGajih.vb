@@ -17,12 +17,10 @@
     End Sub
 
     Private Sub CmBBulan_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmBBulan.SelectedIndexChanged
-        MessageBox.Show(dataBulan.Rows(CmBBulan.SelectedIndex)("id_bulan"))
         Penggajian.fungsi.BulanGS = dataBulan.Rows(CmBBulan.SelectedIndex)("id_bulan")
     End Sub
 
     Private Sub CmbNama_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbNama.SelectedIndexChanged
-        MessageBox.Show(dataNama.Rows(CmbNama.SelectedIndex)("id_karyawan"))
         Penggajian.fungsi.idKaryawanGaji = dataNama.Rows(CmbNama.SelectedIndex)("id_karyawan")
     End Sub
 

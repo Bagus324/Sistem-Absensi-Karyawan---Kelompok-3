@@ -29,7 +29,6 @@
                                                 FormAbsensi.absensi.AbsenKeluarProperty)
         x = FormAbsensi.absensi.ngitung(FormAbsensi.absensi.namaProperty)
         If Integer.Parse(x.Hour) < 8 Then
-            MessageBox.Show("penalti")
             FormAbsensi.absensi.gajihPenalti(FormAbsensi.absensi.namaProperty)
         Else
             FormAbsensi.absensi.gajihFull(FormAbsensi.absensi.namaProperty)

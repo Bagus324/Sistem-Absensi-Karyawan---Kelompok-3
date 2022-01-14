@@ -21,9 +21,6 @@
 
     Private Sub BtnStatus_Click(sender As Object, e As EventArgs) Handles BtnStatus.Click
         FormAbsensi.absensi.GantiStatusProperty = dataStatus.Rows(ComboBoxStatus.SelectedIndex)("id_status")
-        MessageBox.Show(FormAbsensi.absensi.namaProperty)
-
-
         'Dim convertedAbsensi = FormAbsensi.absensi.ConvertAbsensiToString(FormAbsensi.absensi.getAbsensiItem)
 
         FormAbsensi.absensi.Upt2DataAbsensiDatabase(FormAbsensi.absensi.GantiStatusProperty, FormAbsensi.selectedTableAbsensi)
