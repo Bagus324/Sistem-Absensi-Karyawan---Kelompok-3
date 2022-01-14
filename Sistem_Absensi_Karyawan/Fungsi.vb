@@ -114,8 +114,8 @@ Public Class Fungsi
         End Try
     End Function
     Public Function NgitungTotal(id As String, bln As String) As String
+        Dim result
         Try
-            Dim result As String
 
             dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" + "password = " + password + ";" + "database = " + database
             dbConn.Open()
@@ -124,14 +124,18 @@ Public Class Fungsi
 
             sqlRead = sqlCommand.ExecuteReader
             While sqlRead.Read
-                result = sqlRead.GetString(0).ToString()
+                result = sqlRead.GetString(0)
             End While
             sqlRead.Close()
             dbConn.Close()
-            Return result
         Catch ex As Exception
-            MessageBox.Show(ex.ToString)
+            result = ""
+            MessageBox.Show("Data yang di hasilkan adalah NULL, coba cek data absensi karyawan terkait lalu coba lagi")
+            dbConn.Close()
+        Finally
+            dbConn.Dispose()
         End Try
+        Return result
     End Function
     Public Function AddDataGajiDatabase(id As String, bln As String, total As String)
         dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" + "password = " + password + ";" + "database = " + database
@@ -222,8 +226,9 @@ Public Class Fungsi
         Return result
     End Function
     Public Function GetDataKaryawanByIDDatabase(ID As Integer) As List(Of String)
+        Dim result As New List(Of String)
         Try
-            Dim result As New List(Of String)
+
 
             dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" + "password = " + password + ";" + "database = " + database
             dbConn.Open()
@@ -247,10 +252,11 @@ Public Class Fungsi
 
             sqlRead.Close()
             dbConn.Close()
-            Return result
+
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
+        Return result
     End Function
     Public Function UpdateDataKaryawanByIDDatabase(ID As Integer,
                                                   nik As String,

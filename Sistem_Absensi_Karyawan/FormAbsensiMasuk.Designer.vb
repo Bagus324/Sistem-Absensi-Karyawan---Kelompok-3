@@ -25,7 +25,7 @@ Partial Class FormAbsensiMasuk
         Me.LblAbsenMasuk = New System.Windows.Forms.Label()
         Me.LblNama = New System.Windows.Forms.Label()
         Me.lblabsensi = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnCancel = New System.Windows.Forms.Button()
         Me.DtpAbsenMasuk = New System.Windows.Forms.DateTimePicker()
         Me.LblTanggal = New System.Windows.Forms.Label()
         Me.DtpTanggal = New System.Windows.Forms.DateTimePicker()
@@ -63,14 +63,14 @@ Partial Class FormAbsensiMasuk
         Me.lblabsensi.TabIndex = 25
         Me.lblabsensi.Text = "Absensi Masuk"
         '
-        'Button1
+        'BtnCancel
         '
-        Me.Button1.Location = New System.Drawing.Point(477, 383)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 26
-        Me.Button1.Text = "batal"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BtnCancel.Location = New System.Drawing.Point(477, 383)
+        Me.BtnCancel.Name = "BtnCancel"
+        Me.BtnCancel.Size = New System.Drawing.Size(75, 23)
+        Me.BtnCancel.TabIndex = 26
+        Me.BtnCancel.Text = "batal"
+        Me.BtnCancel.UseVisualStyleBackColor = True
         '
         'DtpAbsenMasuk
         '
@@ -130,7 +130,7 @@ Partial Class FormAbsensiMasuk
         Me.Controls.Add(Me.DtpTanggal)
         Me.Controls.Add(Me.LblTanggal)
         Me.Controls.Add(Me.DtpAbsenMasuk)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.BtnCancel)
         Me.Controls.Add(Me.lblabsensi)
         Me.Controls.Add(Me.LblAbsenMasuk)
         Me.Controls.Add(Me.LblNama)
@@ -143,7 +143,7 @@ Partial Class FormAbsensiMasuk
     Friend WithEvents LblAbsenMasuk As Label
     Friend WithEvents LblNama As Label
     Friend WithEvents lblabsensi As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnCancel As Button
     Friend WithEvents DtpAbsenMasuk As DateTimePicker
     Friend WithEvents LblTanggal As Label
     Friend WithEvents DtpTanggal As DateTimePicker
