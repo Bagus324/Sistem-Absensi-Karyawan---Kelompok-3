@@ -31,6 +31,7 @@ Partial Class FormAbsensiMasuk
         Me.DtpTanggal = New System.Windows.Forms.DateTimePicker()
         Me.BtnTambahAbsensi = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'LblAbsenMasuk
@@ -75,6 +76,7 @@ Partial Class FormAbsensiMasuk
         'DtpAbsenMasuk
         '
         Me.DtpAbsenMasuk.CustomFormat = "HH:mm"
+        Me.DtpAbsenMasuk.Enabled = False
         Me.DtpAbsenMasuk.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DtpAbsenMasuk.Location = New System.Drawing.Point(327, 198)
         Me.DtpAbsenMasuk.Name = "DtpAbsenMasuk"
@@ -95,6 +97,7 @@ Partial Class FormAbsensiMasuk
         '
         'DtpTanggal
         '
+        Me.DtpTanggal.Enabled = False
         Me.DtpTanggal.Location = New System.Drawing.Point(327, 159)
         Me.DtpTanggal.Name = "DtpTanggal"
         Me.DtpTanggal.Size = New System.Drawing.Size(225, 20)
@@ -118,11 +121,21 @@ Partial Class FormAbsensiMasuk
         Me.ComboBox1.Size = New System.Drawing.Size(225, 21)
         Me.ComboBox1.TabIndex = 33
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(291, 349)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 34
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'FormAbsensiMasuk
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.BtnTambahAbsensi)
         Me.Controls.Add(Me.DtpTanggal)
@@ -147,4 +160,5 @@ Partial Class FormAbsensiMasuk
     Friend WithEvents DtpTanggal As DateTimePicker
     Friend WithEvents BtnTambahAbsensi As Button
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Button2 As Button
 End Class

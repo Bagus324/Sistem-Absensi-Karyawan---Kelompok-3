@@ -45,6 +45,7 @@ Partial Class FormAbsensiKeluar
         '
         'DtpTanggal
         '
+        Me.DtpTanggal.Enabled = False
         Me.DtpTanggal.Location = New System.Drawing.Point(396, 161)
         Me.DtpTanggal.Name = "DtpTanggal"
         Me.DtpTanggal.Size = New System.Drawing.Size(225, 20)
@@ -63,6 +64,7 @@ Partial Class FormAbsensiKeluar
         'DtpAbsenKeluar
         '
         Me.DtpAbsenKeluar.CustomFormat = "HH:mm"
+        Me.DtpAbsenKeluar.Enabled = False
         Me.DtpAbsenKeluar.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DtpAbsenKeluar.Location = New System.Drawing.Point(396, 201)
         Me.DtpAbsenKeluar.Name = "DtpAbsenKeluar"

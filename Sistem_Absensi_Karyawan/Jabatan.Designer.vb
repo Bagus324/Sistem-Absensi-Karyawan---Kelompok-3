@@ -32,7 +32,7 @@ Partial Class Jabatan
         '
         'BtnHapus
         '
-        Me.BtnHapus.Location = New System.Drawing.Point(586, 336)
+        Me.BtnHapus.Location = New System.Drawing.Point(280, 257)
         Me.BtnHapus.Name = "BtnHapus"
         Me.BtnHapus.Size = New System.Drawing.Size(75, 23)
         Me.BtnHapus.TabIndex = 10
@@ -41,7 +41,7 @@ Partial Class Jabatan
         '
         'BtnEdit
         '
-        Me.BtnEdit.Location = New System.Drawing.Point(332, 336)
+        Me.BtnEdit.Location = New System.Drawing.Point(199, 257)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(75, 23)
         Me.BtnEdit.TabIndex = 9
@@ -50,7 +50,7 @@ Partial Class Jabatan
         '
         'BtnTambah
         '
-        Me.BtnTambah.Location = New System.Drawing.Point(118, 336)
+        Me.BtnTambah.Location = New System.Drawing.Point(118, 257)
         Me.BtnTambah.Name = "BtnTambah"
         Me.BtnTambah.Size = New System.Drawing.Size(75, 23)
         Me.BtnTambah.TabIndex = 8
@@ -60,16 +60,16 @@ Partial Class Jabatan
         'DataGridJabatan
         '
         Me.DataGridJabatan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridJabatan.Location = New System.Drawing.Point(12, 129)
+        Me.DataGridJabatan.Location = New System.Drawing.Point(12, 50)
         Me.DataGridJabatan.Name = "DataGridJabatan"
-        Me.DataGridJabatan.Size = New System.Drawing.Size(776, 158)
+        Me.DataGridJabatan.Size = New System.Drawing.Size(343, 158)
         Me.DataGridJabatan.TabIndex = 7
         '
         'LblJabatan
         '
         Me.LblJabatan.AutoSize = True
         Me.LblJabatan.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblJabatan.Location = New System.Drawing.Point(29, 92)
+        Me.LblJabatan.Location = New System.Drawing.Point(29, 13)
         Me.LblJabatan.Name = "LblJabatan"
         Me.LblJabatan.Size = New System.Drawing.Size(103, 24)
         Me.LblJabatan.TabIndex = 6
@@ -79,7 +79,7 @@ Partial Class Jabatan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(395, 298)
         Me.Controls.Add(Me.BtnHapus)
         Me.Controls.Add(Me.BtnEdit)
         Me.Controls.Add(Me.BtnTambah)

@@ -31,7 +31,7 @@ Partial Class HapusKaryawan
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(255, 137)
+        Me.Label2.Location = New System.Drawing.Point(70, 46)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(347, 20)
@@ -43,7 +43,7 @@ Partial Class HapusKaryawan
         Me.LblKoleksiHapus.AutoSize = True
         Me.LblKoleksiHapus.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblKoleksiHapus.ForeColor = System.Drawing.Color.Black
-        Me.LblKoleksiHapus.Location = New System.Drawing.Point(277, 196)
+        Me.LblKoleksiHapus.Location = New System.Drawing.Point(92, 105)
         Me.LblKoleksiHapus.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblKoleksiHapus.Name = "LblKoleksiHapus"
         Me.LblKoleksiHapus.Size = New System.Drawing.Size(0, 36)
@@ -51,7 +51,7 @@ Partial Class HapusKaryawan
         '
         'BtnHapus
         '
-        Me.BtnHapus.Location = New System.Drawing.Point(321, 281)
+        Me.BtnHapus.Location = New System.Drawing.Point(136, 190)
         Me.BtnHapus.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnHapus.Name = "BtnHapus"
         Me.BtnHapus.Size = New System.Drawing.Size(123, 33)
@@ -59,15 +59,15 @@ Partial Class HapusKaryawan
         Me.BtnHapus.Text = "Ya"
         Me.BtnHapus.UseVisualStyleBackColor = True
         '
-        'Hapus
+        'HapusKaryawan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(488, 309)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.LblKoleksiHapus)
         Me.Controls.Add(Me.BtnHapus)
-        Me.Name = "Hapus"
+        Me.Name = "HapusKaryawan"
         Me.Text = "Hapus"
         Me.ResumeLayout(False)
         Me.PerformLayout()

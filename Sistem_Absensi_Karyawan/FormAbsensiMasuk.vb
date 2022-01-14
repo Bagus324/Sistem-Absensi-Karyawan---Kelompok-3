@@ -5,7 +5,7 @@
 
         ' This call is required by the designer.
         InitializeComponent()
-
+        DtpAbsenMasuk.CustomFormat = DateTime.Now.ToString("HH:mm")
         ' Add any initialization after the InitializeComponent() call.
         'DtpAbsenMasuk.Format = DateTimePickerFormat.Custom
         'DtpAbsenKeluar.Format = DateTimePickerFormat.Custom
@@ -30,17 +30,14 @@
         'Dim convertedAbsensi = FormAbsensi.absensi.ConvertAbsensiToString(FormAbsensi.absensi.getAbsensiItem)
         FormAbsensi.absensi.namaProperty = ComboBox1.SelectedItem()
         FormAbsensi.absensi.AddDataAbsensiDatabase(FormAbsensi.absensi.namaProperty,
-                                                FormAbsensi.absensi.TanggalProperty,
                                                 FormAbsensi.absensi.AbsenMasukProperty)
-
-        Dim infotambahabsensi = New InfoAbsensi
-
-        infotambahabsensi.Show()
         Me.Close()
 
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        MessageBox.Show(DateTime.Now.ToString("HH:mm"))
     End Sub
+
+
 End Class

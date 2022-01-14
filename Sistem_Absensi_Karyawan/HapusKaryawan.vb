@@ -12,4 +12,6 @@
         Karyawan.fungsi.DeleteDataByIDDatabase(Karyawan.selectedData)
         Me.Close()
     End Sub
+
+
 End Class

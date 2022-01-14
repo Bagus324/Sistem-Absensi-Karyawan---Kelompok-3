@@ -2,7 +2,10 @@
     Public Shared fungsi As Fungsi
     Public Shared selectedData
     Public Shared selectedNamaData
+    Public Shared selectedBulanData
     Public Shared ubahGaji As EditGaji
+    Public Shared tambahGaji As TambahGajih
+    Public Shared hapusGajih As HapusGaji
     Public Sub New()
         fungsi = New Fungsi
         ' This call is required by the designer.
@@ -14,8 +17,8 @@
     Private Sub ReloadDataTableDatabase()
         DataGridGaji.DataSource = fungsi.GetDataGajiDatabase()
     End Sub
-    Private Sub Penggajian_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    Private Sub Penggajian_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        ReloadDataTableDatabase()
     End Sub
 
     Private Sub DataGridGaji_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridGaji.CellClick
@@ -25,6 +28,7 @@
 
         selectedData = selectedRow.Cells(0).Value
         selectedNamaData = selectedRow.Cells(1).Value
+        selectedBulanData = selectedRow.Cells(2).Value
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
@@ -37,4 +41,15 @@
         ubahGaji = New EditGaji
         ubahGaji.Show()
     End Sub
+
+    Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
+        tambahGaji = New TambahGajih
+        tambahGaji.Show()
+    End Sub
+
+    Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles BtnHapus.Click
+        hapusGajih = New HapusGaji
+        hapusGajih.Show()
+    End Sub
+
 End Class

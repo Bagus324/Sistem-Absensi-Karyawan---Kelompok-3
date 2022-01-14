@@ -118,12 +118,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Absensi.vb" />
-    <Compile Include="EditKaryawan.Designer.vb">
-      <DependentUpon>EditKaryawan.vb</DependentUpon>
-    </Compile>
-    <Compile Include="EditKaryawan.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="EditGaji.Designer.vb">
       <DependentUpon>EditGaji.vb</DependentUpon>
     </Compile>
@@ -134,6 +128,12 @@
       <DependentUpon>EditJabatan.vb</DependentUpon>
     </Compile>
     <Compile Include="EditJabatan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditKaryawan.Designer.vb">
+      <DependentUpon>EditKaryawan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditKaryawan.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormAbsensi.Designer.vb">
@@ -161,16 +161,16 @@
     <Compile Include="GantiStatusAbsensi.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HapusKaryawan.Designer.vb">
-      <DependentUpon>HapusKaryawan.vb</DependentUpon>
-    </Compile>
-    <Compile Include="HapusKaryawan.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="HapusAbsensi.Designer.vb">
       <DependentUpon>HapusAbsensi.vb</DependentUpon>
     </Compile>
     <Compile Include="HapusAbsensi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HapusGaji.Designer.vb">
+      <DependentUpon>HapusGaji.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HapusGaji.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HapusJabatan.Designer.vb">
@@ -179,16 +179,16 @@
     <Compile Include="HapusJabatan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="HapusKaryawan.Designer.vb">
+      <DependentUpon>HapusKaryawan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HapusKaryawan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="home.Designer.vb">
       <DependentUpon>home.vb</DependentUpon>
     </Compile>
     <Compile Include="home.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InfoAbsensi.Designer.vb">
-      <DependentUpon>InfoAbsensi.vb</DependentUpon>
-    </Compile>
-    <Compile Include="InfoAbsensi.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Jabatan.Designer.vb">
@@ -237,6 +237,12 @@
     <Compile Include="SignUp.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TambahGajih.Designer.vb">
+      <DependentUpon>TambahGajih.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TambahGajih.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TambahJabatan.Designer.vb">
       <DependentUpon>TambahJabatan.vb</DependentUpon>
     </Compile>
@@ -252,14 +258,14 @@
     <Compile Include="Users.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="EditKaryawan.resx">
-      <DependentUpon>EditKaryawan.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EditGaji.resx">
       <DependentUpon>EditGaji.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditJabatan.resx">
       <DependentUpon>EditJabatan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditKaryawan.resx">
+      <DependentUpon>EditKaryawan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAbsensi.resx">
       <DependentUpon>FormAbsensi.vb</DependentUpon>
@@ -273,20 +279,20 @@
     <EmbeddedResource Include="GantiStatusAbsensi.resx">
       <DependentUpon>GantiStatusAbsensi.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HapusKaryawan.resx">
-      <DependentUpon>HapusKaryawan.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="HapusAbsensi.resx">
       <DependentUpon>HapusAbsensi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HapusGaji.resx">
+      <DependentUpon>HapusGaji.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HapusJabatan.resx">
       <DependentUpon>HapusJabatan.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HapusKaryawan.resx">
+      <DependentUpon>HapusKaryawan.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="home.resx">
       <DependentUpon>home.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InfoAbsensi.resx">
-      <DependentUpon>InfoAbsensi.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Jabatan.resx">
       <DependentUpon>Jabatan.vb</DependentUpon>
@@ -309,6 +315,9 @@
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TambahGajih.resx">
+      <DependentUpon>TambahGajih.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TambahJabatan.resx">
       <DependentUpon>TambahJabatan.vb</DependentUpon>
     </EmbeddedResource>
@@ -317,7 +326,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -327,7 +335,9 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jfif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

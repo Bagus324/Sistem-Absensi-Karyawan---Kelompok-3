@@ -12,4 +12,5 @@
         Jabatan.fungsi.DeleteDataJabatanByIDDatabase(Jabatan.selectedData)
         Me.Close()
     End Sub
+
 End Class

@@ -2,6 +2,7 @@
     Public Shared formJabatan As Jabatan
     Public Shared formKaryawan As Karyawan
     Public Shared formGaji As Penggajian
+    Public Shared formAbsen As FormAbsensi
 
 
     Private Sub Karyawan_Click(sender As Object, e As EventArgs) Handles BtnKaryawan.Click
@@ -17,5 +18,13 @@
     Private Sub BtnGaji_Click(sender As Object, e As EventArgs) Handles BtnGaji.Click
         formGaji = New Penggajian
         formGaji.Show()
+    End Sub
+
+    Private Sub BtnAbsen_Click(sender As Object, e As EventArgs) Handles BtnAbsen.Click
+        formAbsen = New FormAbsensi
+        formAbsen.Show()
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
     End Sub
 End Class

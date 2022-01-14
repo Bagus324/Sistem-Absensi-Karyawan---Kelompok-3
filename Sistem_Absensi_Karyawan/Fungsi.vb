@@ -12,14 +12,16 @@ Public Class Fungsi
     Private database As String = "sistemabsensikaryawan"
     'sampe sini
     '======================================================
-    'GS
+    'variabel GS
     Private Shared nama As String
     Private Shared nik As String
     Private Shared alamat As String
     Private Shared namaJabatan As String
+    Private Shared IDJabatan As String
     Private Shared gajih As String
     Private Shared tgajih As String
     Private Shared bulan As String
+    Private Shared id_karyawan As String
     '==================================================Penggajigan=================================
     Public Function GetDataGajiDatabase() As DataTable
         Dim result As New DataTable
@@ -27,7 +29,9 @@ Public Class Fungsi
         dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" + "password = " + password + ";" + "database = " + database
         dbConn.Open()
         sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id_data, id_karyawan, id_bulan, total_gajih FROM penggajian"
+        sqlCommand.CommandText = "SELECT p.id_data as 'ID DATA ABSENSI', k.nama_karyawan as 'Nama Karyawan', b.nama_bulan as 'Nama Bulan', p.total_gajih as 'Total Gajih' FROM penggajian p
+                                  INNER JOIN karyawan k on p.id_karyawan=k.id_karyawan
+                                  INNER JOIN bulan b on p.id_bulan=b.id_bulan"
         sqlRead = sqlCommand.ExecuteReader
 
         result.Load(sqlRead)
@@ -58,19 +62,69 @@ Public Class Fungsi
             MessageBox.Show(ex.ToString)
         End Try
     End Function
-    Public Function ngitung(ID As Integer) As List(Of String)
+    Public Function GetDataBulanDatabase() As DataTable
+        Dim result As New DataTable
+
+        dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" + "password = " + password + ";" + "database = " + database
+        dbConn.Open()
+        sqlCommand.Connection = dbConn
+        sqlCommand.CommandText = "SELECT id_bulan as 'id_bulan', nama_bulan as 'nama_bulan' from bulan"
+        sqlRead = sqlCommand.ExecuteReader
+
+        result.Load(sqlRead)
+        sqlRead.Close()
+        dbConn.Close()
+        Return result
+    End Function
+    Public Function GetDataNamaDatabase() As DataTable
+        Dim result As New DataTable
+
+        dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" + "password = " + password + ";" + "database = " + database
+        dbConn.Open()
+        sqlCommand.Connection = dbConn
+        sqlCommand.CommandText = "SELECT id_karyawan as 'id_karyawan', nama_karyawan as 'nama_karyawan' from karyawan"
+        sqlRead = sqlCommand.ExecuteReader
+
+        result.Load(sqlRead)
+        sqlRead.Close()
+        dbConn.Close()
+        Return result
+    End Function
+    Public Function DeleteGajihByIDDatabase(ID As Integer)
+        dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" + "password = " + password + ";" + "database = " + database
+
         Try
-            Dim result As New List(Of String)
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlQuery = "DELETE FROM penggajian WHERE id_data = '" & ID & "'"
+
+            Debug.WriteLine(sqlQuery)
+
+            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
+            sqlRead = sqlCommand.ExecuteReader
+            dbConn.Close()
+
+            'Perpustakaan.sqlDt.Load(sqlRead)
+            sqlRead.Close()
+            dbConn.Close()
+        Catch ex As Exception
+            Return ex.Message
+        Finally
+            dbConn.Dispose()
+        End Try
+    End Function
+    Public Function NgitungTotal(id As String, bln As String) As String
+        Try
+            Dim result As String
 
             dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" + "password = " + password + ";" + "database = " + database
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            sqlCommand.CommandText = "SELECT waktu_absen_masuk, waktu_absen_keluar FROM absensi WHERE id_absensi='13';"
+            sqlCommand.CommandText = "SELECT SUM(gajih) FROM absensi WHERE id_karyawan='" & id & "' AND EXTRACT(MONTH FROM tanggal_absensi)='" & bln & "'"
 
             sqlRead = sqlCommand.ExecuteReader
             While sqlRead.Read
-                result.Add(sqlRead.GetString(0).ToString())
-                result.Add(sqlRead.GetString(1).ToString())
+                result = sqlRead.GetString(0).ToString()
             End While
             sqlRead.Close()
             dbConn.Close()
@@ -79,7 +133,48 @@ Public Class Fungsi
             MessageBox.Show(ex.ToString)
         End Try
     End Function
+    Public Function AddDataGajiDatabase(id As String, bln As String, total As String)
+        dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" + "password = " + password + ";" + "database = " + database
+        dbConn.Open()
+        sqlCommand.Connection = dbConn
+        sqlQuery = "INSERT INTO penggajian (id_karyawan, id_bulan, total_gajih) VALUE ('" & id & "', '" & bln & "', '" & total & "');"
+
+        sqlCommand = New MySqlCommand(sqlQuery, dbConn)
+        sqlRead = sqlCommand.ExecuteReader
+        dbConn.Close()
+        'Perpustakaan.sqlDt.Load(sqlRead)
+        sqlRead.Close()
+        dbConn.Close()
+        dbConn.Dispose()
+    End Function
+    Public Function EditTotalGaji(ID As Integer, gajih As String)
+
+        dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" + "password = " + password + ";" + "database = " + database
+
+        dbConn.Open()
+        sqlCommand.Connection = dbConn
+        sqlQuery = "UPDATE penggajian SET total_gajih=" & gajih & " WHERE id_data=" & ID
+
+        sqlCommand = New MySqlCommand(sqlQuery, dbConn)
+        sqlRead = sqlCommand.ExecuteReader
+        dbConn.Close()
+        sqlRead.Close()
+    End Function
     '==================================================KARYAWAN====================================
+    Public Function NamaJabatanInKaryawan() As DataTable
+        Dim result As New DataTable
+
+        dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" + "password = " + password + ";" + "database = " + database
+        dbConn.Open()
+        sqlCommand.Connection = dbConn
+        sqlCommand.CommandText = "SELECT id_jabatan as 'id_jabatan', nama_jabatan as 'nama_jabatan' from jabatan"
+        sqlRead = sqlCommand.ExecuteReader
+
+        result.Load(sqlRead)
+        sqlRead.Close()
+        dbConn.Close()
+        Return result
+    End Function
     Public Function AddDataKaryawanDatabase(nik As String,
                                         nama As String,
                                         alamat As String,
@@ -90,7 +185,7 @@ Public Class Fungsi
             dbConn.Open()
             sqlCommand.Connection = dbConn
             sqlQuery = "INSERT INTO karyawan (nik, nama_karyawan, alamat, id_jabatan) VALUE ('" & nik & "', '" & nama & "', '" & alamat &
-            "', (SELECT id_jabatan FROM jabatan WHERE nama_jabatan='" & jabatan & "'));"
+            "', '" & jabatan & "');"
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
             sqlRead = sqlCommand.ExecuteReader
@@ -231,7 +326,7 @@ Public Class Fungsi
         dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" + "password = " + password + ";" + "database = " + database
         dbConn.Open()
         sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id_jabatan, nama_jabatan, gajih_perhari FROM jabatan"
+        sqlCommand.CommandText = "SELECT id_jabatan as 'ID', nama_jabatan as 'Nama Jabatan', gajih_perhari as 'Gaji /Hari' FROM jabatan"
         sqlRead = sqlCommand.ExecuteReader
 
         result.Load(sqlRead)
@@ -335,6 +430,14 @@ Public Class Fungsi
             namaJabatan = value
         End Set
     End Property
+    Public Property IDJabatanGS() As String
+        Get
+            Return IDJabatan
+        End Get
+        Set(ByVal value As String)
+            IDJabatan = value
+        End Set
+    End Property
     Public Property gajihJabatan() As String
         Get
             Return gajih
@@ -373,6 +476,14 @@ Public Class Fungsi
         End Get
         Set(ByVal value As String)
             bulan = value
+        End Set
+    End Property
+    Public Property idKaryawanGaji() As String
+        Get
+            Return id_karyawan
+        End Get
+        Set(ByVal value As String)
+            id_karyawan = value
         End Set
     End Property
 End Class

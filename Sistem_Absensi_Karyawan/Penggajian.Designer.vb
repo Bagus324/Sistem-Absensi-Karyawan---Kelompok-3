@@ -32,7 +32,7 @@ Partial Class Penggajian
         '
         'BtnHapus
         '
-        Me.BtnHapus.Location = New System.Drawing.Point(586, 336)
+        Me.BtnHapus.Location = New System.Drawing.Point(280, 253)
         Me.BtnHapus.Name = "BtnHapus"
         Me.BtnHapus.Size = New System.Drawing.Size(75, 23)
         Me.BtnHapus.TabIndex = 10
@@ -41,7 +41,7 @@ Partial Class Penggajian
         '
         'BtnEdit
         '
-        Me.BtnEdit.Location = New System.Drawing.Point(332, 336)
+        Me.BtnEdit.Location = New System.Drawing.Point(199, 253)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(75, 23)
         Me.BtnEdit.TabIndex = 9
@@ -50,7 +50,7 @@ Partial Class Penggajian
         '
         'BtnTambah
         '
-        Me.BtnTambah.Location = New System.Drawing.Point(118, 336)
+        Me.BtnTambah.Location = New System.Drawing.Point(118, 253)
         Me.BtnTambah.Name = "BtnTambah"
         Me.BtnTambah.Size = New System.Drawing.Size(75, 23)
         Me.BtnTambah.TabIndex = 8
@@ -60,16 +60,16 @@ Partial Class Penggajian
         'DataGridGaji
         '
         Me.DataGridGaji.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridGaji.Location = New System.Drawing.Point(12, 129)
+        Me.DataGridGaji.Location = New System.Drawing.Point(12, 46)
         Me.DataGridGaji.Name = "DataGridGaji"
-        Me.DataGridGaji.Size = New System.Drawing.Size(776, 158)
+        Me.DataGridGaji.Size = New System.Drawing.Size(446, 158)
         Me.DataGridGaji.TabIndex = 7
         '
         'LblKaryawan
         '
         Me.LblKaryawan.AutoSize = True
         Me.LblKaryawan.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblKaryawan.Location = New System.Drawing.Point(29, 92)
+        Me.LblKaryawan.Location = New System.Drawing.Point(29, 9)
         Me.LblKaryawan.Name = "LblKaryawan"
         Me.LblKaryawan.Size = New System.Drawing.Size(140, 24)
         Me.LblKaryawan.TabIndex = 6
@@ -79,7 +79,7 @@ Partial Class Penggajian
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(487, 311)
         Me.Controls.Add(Me.BtnHapus)
         Me.Controls.Add(Me.BtnEdit)
         Me.Controls.Add(Me.BtnTambah)

@@ -48,4 +48,6 @@
         Dim formDelete = New HapusJabatan()
         formDelete.Show()
     End Sub
+
+
 End Class
