@@ -4,11 +4,18 @@
     Public Shared editJabatan As EditJabatan
     Public Shared selectedData
     Public Shared selectedDataJabatan
+    Private selectedRow As DataGridViewRow
     Public Sub New()
         fungsi = New Fungsi
         ' This call is required by the designer.
         InitializeComponent()
         ReloadDataTableDatabase()
+        If (DataGridJabatan.Rows.Count > 0) Then
+            DataGridJabatan.Rows(0).Cells(0).Selected = True
+            selectedRow = DataGridJabatan.Rows(0)
+            selectedData = selectedRow.Cells(0).Value
+            selectedDataJabatan = selectedRow.Cells(2).Value
+        End If
         ' Add any initialization after the InitializeComponent() call.
 
     End Sub
@@ -26,15 +33,11 @@
     End Sub
 
     Private Sub DataGridJabatan_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridJabatan.CellClick
-        Dim index As Integer = e.RowIndex
-        Dim selectedRow As DataGridViewRow
-        selectedRow = DataGridJabatan.Rows(index)
 
-        selectedData = selectedRow.Cells(0).Value
-        selectedDataJabatan = selectedRow.Cells(1).Value
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
+        MessageBox.Show(selectedData)
         Dim column As List(Of String) = fungsi.GetDataJabatanByIDDatabase(selectedData)
 
         fungsi.namaJabatanGS = column(1)

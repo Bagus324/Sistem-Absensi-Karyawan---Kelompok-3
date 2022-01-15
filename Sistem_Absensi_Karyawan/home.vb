@@ -27,4 +27,8 @@
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
     End Sub
+
+    Private Sub home_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        SignIn.Close()
+    End Sub
 End Class

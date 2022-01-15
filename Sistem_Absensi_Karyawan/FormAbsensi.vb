@@ -9,6 +9,7 @@
     Public Shared selectedTableAbsensiStatus As String
     Public Shared x As DateTime
     Public Shared y
+    Private selectedRow As DataGridViewRow
     Public Sub New()
 
         absensi = New Absensi()
@@ -19,6 +20,12 @@
 
         ' Add any initialization after the InitializeComponent() call.
         ReloadDataTableDatabase()
+        If (DataGridViewAbsensi.Rows.Count > 0) Then
+            DataGridViewAbsensi.Rows(0).Cells(0).Selected = True
+            selectedRow = DataGridViewAbsensi.Rows(0)
+            selectedTableAbsensi = selectedRow.Cells(0).Value
+            absensi.namaProperty = selectedRow.Cells(1).Value
+        End If
     End Sub
 
 
@@ -53,13 +60,13 @@
 
     Private Sub DataGridViewAbsensi_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewAbsensi.CellClick
         Dim index As Integer = e.RowIndex
-        Dim selectedrow As DataGridViewRow
-        selectedrow = DataGridViewAbsensi.Rows(index)
-
-        selectedTableAbsensi = selectedrow.Cells(0).Value
-        absensi.namaProperty = selectedrow.Cells(1).Value
-        absensi.TanggalProperty = selectedrow.Cells(2).Value
-        absensi.StatusGS = selectedrow.Cells(5).Value
+        If (index >= 0) Then
+            selectedRow = DataGridViewAbsensi.Rows(index)
+            selectedTableAbsensi = selectedRow.Cells(0).Value
+            absensi.namaProperty = selectedRow.Cells(1).Value
+            absensi.TanggalProperty = selectedRow.Cells(2).Value
+            absensi.StatusGS = selectedRow.Cells(5).Value
+        End If
     End Sub
 
     Private Sub AbsensiKeluarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AbsensiKeluarToolStripMenuItem.Click
@@ -70,10 +77,5 @@
     Private Sub BtnHapusAbsensi_Click(sender As Object, e As EventArgs) Handles BtnHapusAbsensi.Click
         Dim hapus = New HapusAbsensi()
         hapus.Show()
-    End Sub
-
-
-    Private Sub FormAbsensi_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 End Class
