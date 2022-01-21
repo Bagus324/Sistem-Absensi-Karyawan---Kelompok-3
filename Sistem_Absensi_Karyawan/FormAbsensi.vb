@@ -71,7 +71,11 @@
 
     Private Sub AbsensiKeluarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AbsensiKeluarToolStripMenuItem.Click
         Dim formabsensikeluar = New FormAbsensiKeluar()
-        formabsensikeluar.Show()
+        Try
+            formabsensikeluar.Show()
+        Catch ex As Exception
+            warning.Show()
+        End Try
     End Sub
 
     Private Sub BtnHapusAbsensi_Click(sender As Object, e As EventArgs) Handles BtnHapusAbsensi.Click

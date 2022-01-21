@@ -2,7 +2,9 @@
     Public Shared x As DateTime
     Public Shared y
     Public Sub New()
-
+        If warning.WarningInt = 1 Then
+            Me.Close()
+        End If
         ' This call is required by the designer.
         InitializeComponent()
 
@@ -34,5 +36,13 @@
             FormAbsensi.absensi.gajihFull(FormAbsensi.absensi.namaProperty)
         End If
         Me.Close()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+    End Sub
+
+    Private Sub FormAbsensiKeluar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

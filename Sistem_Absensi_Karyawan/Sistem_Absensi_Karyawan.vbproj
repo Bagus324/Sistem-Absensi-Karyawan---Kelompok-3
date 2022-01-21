@@ -256,6 +256,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Users.vb" />
+    <Compile Include="warning.Designer.vb">
+      <DependentUpon>warning.vb</DependentUpon>
+    </Compile>
+    <Compile Include="warning.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="EditGaji.resx">
@@ -323,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TambahKaryawan.resx">
       <DependentUpon>TambahKaryawan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="warning.resx">
+      <DependentUpon>warning.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

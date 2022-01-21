@@ -234,30 +234,42 @@ Public Class Absensi
     End Function
     Public Function CmBnamaKeluar() As List(Of String)
         Dim result As New List(Of String)
+        Try
 
-        dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" + "password = " + password + ";" + "database = " + database
-        dbConn.Open()
-        sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT nama_karyawan FROM karyawan WHERE id_karyawan=(SELECT id_karyawan from absensi WHERE id_status=2)"
-        sqlRead = sqlCommand.ExecuteReader
 
-        While sqlRead.Read
-            result.Add(sqlRead.GetString(0).ToString())
-        End While
-        sqlRead.Close()
-        dbConn.Close()
+            dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" + "password = " + password + ";" + "database = " + database
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlCommand.CommandText = "SELECT nama_karyawan FROM karyawan WHERE id_karyawan=(SELECT id_karyawan from absensi WHERE id_status=2)"
+            sqlRead = sqlCommand.ExecuteReader
+
+            While sqlRead.Read
+                result.Add(sqlRead.GetString(0).ToString())
+            End While
+            sqlRead.Close()
+            dbConn.Close()
+
+        Catch ex As Exception
+            warning.Show()
+        Finally
+            dbConn.Dispose()
+        End Try
         Return result
+    End Function
+    Public Function closing() As List(Of String)
+        dbConn.Close()
     End Function
 
 
 
     Public Function getDataAbsensiByIDDatabase(ID As Integer) As List(Of String)
         Dim result As New List(Of String)
+        Try
 
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" + "password=" + password + ";" + "database =" + database
-        dbConn.Open()
-        sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id_absensi,
+            dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" + "password=" + password + ";" + "database =" + database
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlCommand.CommandText = "SELECT id_absensi,
                                 id_karyawan,
                                 tanggal_absensi,
                                 waktu_absen_masuk, 
@@ -265,19 +277,26 @@ Public Class Absensi
                                 id_status
                                 FROM absensi 
                                 WHERE id_absensi='" & ID & "'"
-        sqlRead = sqlCommand.ExecuteReader
-        While sqlRead.Read
-            result.Add(sqlRead.GetString(0).ToString())
-            result.Add(sqlRead.GetString(1).ToString())
-            result.Add(sqlRead.GetString(2).ToString())
-            result.Add(sqlRead.GetString(3).ToString())
-            result.Add(sqlRead.GetString(4).ToString())
-            result.Add(sqlRead.GetString(5).ToString())
+            sqlRead = sqlCommand.ExecuteReader
+            While sqlRead.Read
+                result.Add(sqlRead.GetString(0).ToString())
+                result.Add(sqlRead.GetString(1).ToString())
+                result.Add(sqlRead.GetString(2).ToString())
+                result.Add(sqlRead.GetString(3).ToString())
+                result.Add(sqlRead.GetString(4).ToString())
+                result.Add(sqlRead.GetString(5).ToString())
 
-        End While
+            End While
 
-        sqlRead.Close()
-        dbConn.Close()
+            sqlRead.Close()
+            dbConn.Close()
+
+        Catch ex As Exception
+            MessageBox.Show("Ada karyawan yang belum absen keluar, coba cek lagi")
+            dbConn.Close()
+        Finally
+            dbConn.Dispose()
+        End Try
         Return result
     End Function
     Public Function DeleteDataAbsensiByIDDatabase(ID As Integer)

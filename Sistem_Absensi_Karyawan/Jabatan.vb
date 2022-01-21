@@ -33,11 +33,15 @@
     End Sub
 
     Private Sub DataGridJabatan_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridJabatan.CellClick
-
+        Dim index As Integer = e.RowIndex
+        If (index >= 0) Then
+            selectedRow = DataGridJabatan.Rows(index)
+            selectedData = selectedRow.Cells(0).Value
+            selectedDataJabatan = selectedRow.Cells(1).Value
+        End If
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
-        MessageBox.Show(selectedData)
         Dim column As List(Of String) = fungsi.GetDataJabatanByIDDatabase(selectedData)
 
         fungsi.namaJabatanGS = column(1)
@@ -51,6 +55,5 @@
         Dim formDelete = New HapusJabatan()
         formDelete.Show()
     End Sub
-
 
 End Class

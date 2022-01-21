@@ -7,4 +7,6 @@
                                               Jabatan.fungsi.namaJabatanGS)
         Me.Close()
     End Sub
+
+
 End Class
