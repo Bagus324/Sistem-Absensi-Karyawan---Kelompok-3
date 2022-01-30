@@ -2,12 +2,10 @@
     Public Shared x As DateTime
     Public Shared y
     Public Sub New()
-        If warning.WarningInt = 1 Then
-            Me.Close()
-        End If
         ' This call is required by the designer.
         InitializeComponent()
-
+        DtpAbsenKeluar.CustomFormat = DateTime.Now.ToString("HH:mm")
+        DtpAbsenKeluar.Value = DateTime.Now
         ' Add any initialization after the InitializeComponent() call.
         Dim listnama As List(Of String) = FormAbsensi.absensi.CmBnamaKeluar()
         ComboBox1.Items.Clear()
@@ -45,4 +43,6 @@
     Private Sub FormAbsensiKeluar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+
 End Class

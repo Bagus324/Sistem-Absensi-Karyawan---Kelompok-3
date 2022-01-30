@@ -62,13 +62,13 @@ Partial Class FormAbsensi
         'AbsensiMasukToolStripMenuItem
         '
         Me.AbsensiMasukToolStripMenuItem.Name = "AbsensiMasukToolStripMenuItem"
-        Me.AbsensiMasukToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AbsensiMasukToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.AbsensiMasukToolStripMenuItem.Text = "Absensi Masuk"
         '
         'AbsensiKeluarToolStripMenuItem
         '
         Me.AbsensiKeluarToolStripMenuItem.Name = "AbsensiKeluarToolStripMenuItem"
-        Me.AbsensiKeluarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AbsensiKeluarToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.AbsensiKeluarToolStripMenuItem.Text = "Absensi Keluar"
         '
         'DataGridViewAbsensi

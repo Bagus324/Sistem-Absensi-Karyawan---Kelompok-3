@@ -10,6 +10,8 @@
     Public Shared x As DateTime
     Public Shared y
     Private selectedRow As DataGridViewRow
+    Public Shared statusAbsen As List(Of String)
+    Public Shared statusKeluar As List(Of String)
     Public Sub New()
 
         absensi = New Absensi()
@@ -38,6 +40,8 @@
 
     Private Sub ReloadDataTableDatabase()
         DataGridViewAbsensi.DataSource = absensi.GetDataAbsensiDatabase()
+        statusAbsen = absensi.loadDataStatus()
+        statusKeluar = absensi.loadDataKeluar()
     End Sub
     Private Sub AbsensiMasukToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AbsensiMasukToolStripMenuItem.Click
         Dim formabsensimasuk = New FormAbsensiMasuk()
@@ -71,15 +75,16 @@
 
     Private Sub AbsensiKeluarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AbsensiKeluarToolStripMenuItem.Click
         Dim formabsensikeluar = New FormAbsensiKeluar()
-        Try
-            formabsensikeluar.Show()
-        Catch ex As Exception
-            warning.Show()
-        End Try
+
+        formabsensikeluar.Show()
+
+
     End Sub
 
     Private Sub BtnHapusAbsensi_Click(sender As Object, e As EventArgs) Handles BtnHapusAbsensi.Click
         Dim hapus = New HapusAbsensi()
         hapus.Show()
     End Sub
+
+
 End Class

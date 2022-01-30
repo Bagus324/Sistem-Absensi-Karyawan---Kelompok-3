@@ -6,6 +6,7 @@
         ' This call is required by the designer.
         InitializeComponent()
         DtpAbsenMasuk.CustomFormat = DateTime.Now.ToString("HH:mm")
+        DtpAbsenMasuk.Value = DateTime.Now
         ' Add any initialization after the InitializeComponent() call.
         'DtpAbsenMasuk.Format = DateTimePickerFormat.Custom
         'DtpAbsenKeluar.Format = DateTimePickerFormat.Custom
@@ -24,7 +25,7 @@
     Private Sub BtnTambahAbsensi_Click(sender As Object, e As EventArgs) Handles BtnTambahAbsensi.Click
 
         FormAbsensi.absensi.TanggalProperty = DtpTanggal.Value.ToString("yyyy/MM/dd")
-        FormAbsensi.absensi.AbsenMasukProperty = DtpAbsenMasuk.Value.ToString("HH:mm:ss")
+        FormAbsensi.absensi.AbsenMasukProperty = DtpAbsenMasuk.Value.ToString("HH:mm")
         'FormAbsensi.absensi.AbsenKeluarProperty = DtpAbsenKeluar.Value.ToString("HH:mm:ss")
 
         'Dim convertedAbsensi = FormAbsensi.absensi.ConvertAbsensiToString(FormAbsensi.absensi.getAbsensiItem)
@@ -38,4 +39,5 @@
     Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
         Me.Close()
     End Sub
+
 End Class

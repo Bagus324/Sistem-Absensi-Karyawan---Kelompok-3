@@ -138,6 +138,42 @@ Public Class Absensi
         dbConn.Close()
         Return result
     End Function
+    Public Function loadDataKeluar() As List(Of String)
+        Dim result As New List(Of String)
+
+        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" + "password=" + password + ";" + "database =" + database
+        dbConn.Open()
+        sqlCommand.Connection = dbConn
+        sqlCommand.CommandText = "SELECT
+                                waktu_absen_keluar
+                                FROM absensi"
+
+        sqlRead = sqlCommand.ExecuteReader
+        While sqlRead.Read
+            result.Add(sqlRead.GetString(0).ToString())
+        End While
+        sqlRead.Close()
+        dbConn.Close()
+        Return result
+    End Function
+    Public Function loadDataStatus() As List(Of String)
+        Dim result As New List(Of String)
+
+        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" + "password=" + password + ";" + "database =" + database
+        dbConn.Open()
+        sqlCommand.Connection = dbConn
+        sqlCommand.CommandText = "SELECT
+                                id_status
+                                FROM absensi"
+
+        sqlRead = sqlCommand.ExecuteReader
+        While sqlRead.Read
+            result.Add(sqlRead.GetString(0).ToString())
+        End While
+        sqlRead.Close()
+        dbConn.Close()
+        Return result
+    End Function
     Public Function AddDataAbsensiDatabase(nama As String,
                                           waktu_absen_masuk As String)
         Dim tgl = Date.Now.ToString("yyyy/MM/dd")
@@ -148,17 +184,16 @@ Public Class Absensi
         dbConn.Open()
         sqlCommand.Connection = dbConn
         sqlQuery = "INSERT INTO absensi (id_karyawan, tanggal_absensi,
-                           waktu_absen_masuk, id_status) VALUE(
+                           waktu_absen_masuk, waktu_absen_keluar, id_status) VALUE(
 
                
                 (select id_karyawan from karyawan where nama_karyawan='" & nama & "'),
                 '" & tgl & "', 
-                '" & waktu_absen_masuk & "', '2')"
+                '" & waktu_absen_masuk & "', '0' , '2')"
 
 
         sqlCommand = New MySqlCommand(sqlQuery, dbConn)
         sqlRead = sqlCommand.ExecuteReader
-        dbConn.Close()
 
         sqlRead.Close()
         dbConn.Close()
@@ -186,7 +221,6 @@ Public Class Absensi
 
         sqlCommand = New MySqlCommand(sqlQuery, dbConn)
         sqlRead = sqlCommand.ExecuteReader
-        dbConn.Close()
 
         sqlRead.Close()
         dbConn.Close()
@@ -208,7 +242,6 @@ Public Class Absensi
 
         sqlCommand = New MySqlCommand(sqlQuery, dbConn)
         sqlRead = sqlCommand.ExecuteReader
-        dbConn.Close()
 
         sqlRead.Close()
         dbConn.Close()
@@ -240,7 +273,7 @@ Public Class Absensi
             dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" + "password = " + password + ";" + "database = " + database
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            sqlCommand.CommandText = "SELECT nama_karyawan FROM karyawan WHERE id_karyawan=(SELECT id_karyawan from absensi WHERE id_status=2)"
+            sqlCommand.CommandText = "SELECT nama_karyawan FROM karyawan WHERE id_karyawan IN (SELECT id_karyawan from absensi WHERE id_status=2 OR waktu_absen_keluar='0')"
             sqlRead = sqlCommand.ExecuteReader
 
             While sqlRead.Read
@@ -250,9 +283,7 @@ Public Class Absensi
             dbConn.Close()
 
         Catch ex As Exception
-            warning.Show()
-        Finally
-            dbConn.Dispose()
+            MessageBox.Show(ex.ToString)
         End Try
         Return result
     End Function
@@ -292,10 +323,8 @@ Public Class Absensi
             dbConn.Close()
 
         Catch ex As Exception
-            MessageBox.Show("Ada karyawan yang belum absen keluar, coba cek lagi")
+            MessageBox.Show(ex.ToString)
             dbConn.Close()
-        Finally
-            dbConn.Dispose()
         End Try
         Return result
     End Function
@@ -317,8 +346,6 @@ Public Class Absensi
             dbConn.Close()
         Catch ex As Exception
             Return ex.Message
-        Finally
-            dbConn.Dispose()
         End Try
     End Function
 
@@ -372,7 +399,6 @@ WHERE id_karyawan=(select id_karyawan from karyawan where nama_karyawan='" & nam
 
         sqlCommand = New MySqlCommand(sqlQuery, dbConn)
         sqlRead = sqlCommand.ExecuteReader
-        dbConn.Close()
         sqlRead.Close()
         dbConn.Close()
     End Function
